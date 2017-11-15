@@ -44,12 +44,15 @@ The Ultimate Future Teller
 <div class="container">
     {% if not isOnline %}
     <div class="col-md-6 ">
-        <div class="card bg-dark text-white" style="width: 20rem; padding-top: 40%;">
-            <div class="card-block">
+        <div class="panel panel-success" style="width: 20rem; padding-top: 40%;">
+            <div class="panel-heading">
                 <h4 class="card-title">Already a member?</h4>
+                </div>
+              <div class="panel-body">
                 <p class="card-text">Log in, and have some fun</p>
                 <a href="{{ url_for('login') }}" class="btn btn-primary">LOG IN</a>
-            </div>
+              </div>
+
         </div>
     </div>
     <div class="col-md-6 ">
