@@ -1,4 +1,5 @@
 import sqlalchemy
+import os
 class login_db_adapter:
     user = "jlemszjdrzdpcp"
     password = "5535447b7c379896937f4111f3d37b2bd8f86da4b9d9e0c84d962779652ef455"
@@ -8,8 +9,8 @@ class login_db_adapter:
     def __init__(self):
         url = 'postgresql://{}:{}@{}:{}/{}'
         url = url.format(self.user, self.password, self.host, self.port, self.db)
-        url = 'postgresql://<psql_username>:<psql_password>@localhost:5432/d7d6vdurd0b8vu'
-        self.con = sqlalchemy.create_engine(url, client_encoding='utf8')
+        uri = os.environ.get('DATABASE_URL', 'postgres://username:password@192.168.1.42/FLASK_ENTRY')
+        self.con = sqlalchemy.create_engine(uri, client_encoding='utf8')
         return
     def getUser(self,id):
 
