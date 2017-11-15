@@ -114,7 +114,7 @@ def index():
     return render_template('index.html', isOnline = isOnline)
 
 
-@app.route('/event/<id>',methods=['GET'])
+@app.route('/event/<id>/<msg>',methods=['GET'])
 @login_required
 def event(id):
     arr = list()
@@ -123,12 +123,12 @@ def event(id):
         arr1.append(i)
     for i in database.getFights(id):
         arr.append(i)
-    return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance)
+    return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance,msg="")
 
 
-@app.route('/event/<id>',methods=['POST'])
+@app.route('/event/<id>/<msg>',methods=['POST'])
 @login_required
-def event_p(id):
+def event_p(id,msg):
     try:
         text = request.form['amount']
         radio = request.form['radio']
@@ -137,16 +137,20 @@ def event_p(id):
             value = 1
         fight = request.form['fight']
     except:
-        return "Bad data"
+        return redirect(
+            url_for('event', id=id, fights=arr, name=arr1, username=current_user.username, balance=current_user.balance,
+                    msg="Select predicted outcome"))
     if not database.makeBet(fight,current_user.id,value,text):
-        return "Not enought balance"
+        return redirect(
+            url_for('event', id=id, fights=arr, name=arr1, username=current_user.username, balance=current_user.balance,
+                    msg="Cannot make the bet, balance is too low"))
     arr = list()
     arr1 = list()
     for i in database.getEventName(id):
         arr1.append(i)
     for i in database.getFights(id):
         arr.append(i)
-    return redirect(url_for('event', id=id,fights=arr, name=arr1, username = current_user.username, balance=current_user.balance))
+    return redirect(url_for('event', id=id,fights=arr, name=arr1, username = current_user.username, balance=current_user.balance,msg=msg))
 
 
 @app.route('/dash')
