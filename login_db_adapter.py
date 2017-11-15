@@ -8,7 +8,7 @@ class login_db_adapter:
     def __init__(self):
         url = 'postgresql://{}:{}@{}:{}/{}'
         url = url.format(self.user, self.password, self.host, self.port, self.db)
-        url = 'postgresql://<psql_username>:<psql_password>@localhost/d7d6vdurd0b8vu'
+        url = 'postgresql://<psql_username>:<psql_password>@localhost:5432/d7d6vdurd0b8vu'
         self.con = sqlalchemy.create_engine(url, client_encoding='utf8')
         return
     def getUser(self,id):
