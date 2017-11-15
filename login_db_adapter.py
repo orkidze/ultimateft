@@ -1,9 +1,9 @@
 import sqlalchemy
 class login_db_adapter:
-    user = "postgres"
-    password = "c4inaz"
-    db = "postgres"
-    host = 'localhost'
+    user = "jlemszjdrzdpcp"
+    password = "5535447b7c379896937f4111f3d37b2bd8f86da4b9d9e0c84d962779652ef455"
+    db = "d7d6vdurd0b8vu"
+    host = 'ec2-50-19-251-149.compute-1.amazonaws.com'
     port = 5432
     def __init__(self):
         return
