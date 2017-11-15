@@ -43,14 +43,38 @@ The Ultimate Future Teller
 
 <div class="container">
     {% if not isOnline %}
-    <div class="col-md-6 "><a href="{{ url_for('login') }}">Login</a></div>
-     <div class="col-md-6 "><a href="{{ url_for('signup') }}">Sign UP!</a></div>
+    <div class="col-md-6 ">
+        <div class="card" style="width: 20rem;">
+            <div class="card-block">
+                <h4 class="card-title">Already a member?</h4>
+                <p class="card-text">Log in, and have some fun</p>
+                <a href="{{ url_for('login') }}" class="btn btn-primary">LOG IN</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 ">
+        <div class="card" style="width: 20rem;">
+            <div class="card-block">
+                <h4 class="card-title">First time here?</h4>
+                <p class="card-text">Sign up for free and get 1000 currency units for the beginning!</p>
+                <a href="{{ url_for('signup') }}" class="btn btn-primary">SIGN UP!</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if isOnline %}
+    <div class="col-md-12 ">
+            <div class="card" style="width: 20rem;">
+                <div class="card-block">
+                    <h4 class="card-title">You are logged in</h4>
+                    <p class="card-text">Enjoy buddy!</p>
+                    <a href="{{ url_for('dash') }}" class="btn btn-primary">Go to the DASHBOARD</a>
+                </div>
+            </div>
+    </div>
+
 
     {% endif %}
-    <div class="starter-template">
-        <h1>Testing website</h1>
-        <p class="lead">Best stuff in da hood!</p>
-    </div>
 
 </div><!-- /.container -->
 {% endblock %}
