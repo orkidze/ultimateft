@@ -74,7 +74,7 @@ def signup():
 
     if form.validate_on_submit():
         database.signup(form.username.data,form.password.data,form.email.data,)
-        return "<h1> You have register! <h1>"
+        return redirect(url_for('index'))
 
     return render_template('signup.html', form=form)
 
