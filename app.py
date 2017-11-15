@@ -116,14 +116,14 @@ def index():
 
 @app.route('/event/<id>/<msg>',methods=['GET'])
 @login_required
-def event(id):
+def event(id,msg):
     arr = list()
     arr1 = list()
     for i in database.getEventName(id):
         arr1.append(i)
     for i in database.getFights(id):
         arr.append(i)
-    return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance,msg="")
+    return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance,msg=msg)
 
 
 @app.route('/event/<id>/<msg>',methods=['POST'])
