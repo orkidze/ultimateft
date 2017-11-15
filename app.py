@@ -114,21 +114,21 @@ def index():
     return render_template('index.html', isOnline = isOnline)
 
 
-@app.route('/event/<id>/<msg>',methods=['GET'])
+@app.route('/event/<id>',methods=['GET'])
 @login_required
-def event(id,msg):
+def event(id):
     arr = list()
     arr1 = list()
     for i in database.getEventName(id):
         arr1.append(i)
     for i in database.getFights(id):
         arr.append(i)
-    return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance,msg=msg)
+    return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance)
 
 
 @app.route('/event/<id>/<msg>',methods=['POST'])
 @login_required
-def event_p(id,msg):
+def event_p(id):
     try:
         text = request.form['amount']
         radio = request.form['radio']
@@ -138,19 +138,17 @@ def event_p(id,msg):
         fight = request.form['fight']
     except:
         return redirect(
-            url_for('event', id=id, fights=arr, name=arr1, username=current_user.username, balance=current_user.balance,
-                    msg="Select predicted outcome"))
+            url_for('event', id=id, fights=arr, name=arr1, username=current_user.username, balance=current_user.balance))
     if not database.makeBet(fight,current_user.id,value,text):
         return redirect(
-            url_for('event', id=id, fights=arr, name=arr1, username=current_user.username, balance=current_user.balance,
-                    msg="Cannot make the bet, balance is too low"))
+            url_for('event', id=id, fights=arr, name=arr1, username=current_user.username, balance=current_user.balance))
     arr = list()
     arr1 = list()
     for i in database.getEventName(id):
         arr1.append(i)
     for i in database.getFights(id):
         arr.append(i)
-    return redirect(url_for('event', id=id,fights=arr, name=arr1, username = current_user.username, balance=current_user.balance,msg=msg))
+    return redirect(url_for('event', id=id,fights=arr, name=arr1, username = current_user.username, balance=current_user.balance))
 
 
 @app.route('/dash')
