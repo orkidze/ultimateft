@@ -60,7 +60,7 @@ class login_db_adapter:
         url = url.format(self.user, self.password, self.host, self.port, self.db)
         con = sqlalchemy.create_engine(url, client_encoding='utf8')
         i = con.execute(
-            "select * from website.users order by balance limit 50 ")
+            "select * from website.users order by balance dsc limit 50 ")
         return i
     def makeBet(self,fightID,userID,outcome,amount):
         i = self.getUser(userID)
