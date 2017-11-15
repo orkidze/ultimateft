@@ -44,7 +44,16 @@ Dashboard
         </div>
     </div>
 </nav>
-
+<div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li ><a href="{{ url_for('dash') }}">Overview <span class="sr-only">(current)</span></a></li>
+                <li><a  href="{{ url_for('bets') }}">My bets</a></li>
+                <li class="active" > <a href="{{ url_for('upcomingEvents') }}">Upcoming Events</a></li>
+                <li><a href="{{ url_for('top50') }}">TOP 50</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 <div class="container-fluid">
     <div class="container">
   <h2>Information about rules and stuff</h2>
@@ -61,7 +70,7 @@ Dashboard
         </div>
         <div class="modal-body">
           <p>This is a fantasy betting website for UFC</p>
-            <h6>Rules</h6>
+            <h4>Rules</h4>
             <ul>
                 <li>You get 1000 unit of currency when you begin</li>
                 <li>Currency is reset every 3 month</li>
@@ -75,6 +84,6 @@ Dashboard
       </div>
     </div>
   </div>
-</div>
+    </div></div></div>
 </div>
 {% endblock %}
