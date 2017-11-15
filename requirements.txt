@@ -2,3 +2,4 @@ flask>=0.12.2
 gunicorn>=19.7.1
 Flask-WTF>=0.14.2
 Flask-Bootstrap>=3.3.7.1
+Flask-Login>=0.4.0
