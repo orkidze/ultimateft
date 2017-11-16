@@ -52,6 +52,8 @@ class login_db_adapter:
         return i
     def makeBet(self,fightID,userID,outcome,amount):
         i = self.getUser(userID)
+        if len(amount) == 0:
+            return False
         if int(amount) > int(i[4]):
             return False
 
