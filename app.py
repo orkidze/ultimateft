@@ -60,8 +60,10 @@ def login():
             i = database.getUserID(form.username.data)
             user = User(i[0],i[1],i[2],i[3],i[4])
             login_user(user, remember = form.remember.data)
-            return redirect(url_for('index'))
-        return "Invalid username or password"
+            flash("You logged in")
+            return redirect(url_for('dash'),username = current_user.username, balance=current_user.balance)
+        flash("Invalid username or password")
+        return redirect(url_for("login"))
 
     return render_template('login.html', form=form)
 
