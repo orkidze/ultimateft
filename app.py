@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, url_for, redirect
+from flask import Flask, request, render_template, url_for, redirect, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField,PasswordField,BooleanField
 from wtforms.validators import InputRequired, length, Email
@@ -74,7 +74,7 @@ def signup():
 
     if form.validate_on_submit():
         database.signup(form.username.data,form.password.data,form.email.data,)
-        return redirect(url_for('index'))
+        return "<h1> You have register! <h1>"
 
     return render_template('signup.html', form=form)
 
@@ -126,7 +126,7 @@ def event(id):
     return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance)
 
 
-@app.route('/event/<id>/<msg>',methods=['POST'])
+@app.route('/event/<id>',methods=['POST'])
 @login_required
 def event_p(id):
     try:
@@ -137,11 +137,9 @@ def event_p(id):
             value = 1
         fight = request.form['fight']
     except:
-        return redirect(
-            url_for('event', id=id, fights=arr, name=arr1, username=current_user.username, balance=current_user.balance))
+        flash("You need to make a selection")
     if not database.makeBet(fight,current_user.id,value,text):
-        return redirect(
-            url_for('event', id=id, fights=arr, name=arr1, username=current_user.username, balance=current_user.balance))
+        flash("Not enought balance")
     arr = list()
     arr1 = list()
     for i in database.getEventName(id):
