@@ -129,6 +129,12 @@ def event(id):
 @app.route('/event/<id>',methods=['POST'])
 @login_required
 def event_p(id):
+    arr = list()
+    arr1 = list()
+    for i in database.getEventName(id):
+        arr1.append(i)
+    for i in database.getFights(id):
+        arr.append(i)
     try:
         text = request.form['amount']
         radio = request.form['radio']
@@ -142,12 +148,6 @@ def event_p(id):
                                 balance=current_user.balance))
     if not database.makeBet(fight,current_user.id,value,text):
         flash("Not enought balance")
-    arr = list()
-    arr1 = list()
-    for i in database.getEventName(id):
-        arr1.append(i)
-    for i in database.getFights(id):
-        arr.append(i)
     return redirect(url_for('event', id=id,fights=arr, name=arr1, username = current_user.username, balance=current_user.balance))
 
 
