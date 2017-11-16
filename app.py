@@ -61,7 +61,7 @@ def login():
             user = User(i[0],i[1],i[2],i[3],i[4])
             login_user(user, remember = form.remember.data)
             flash("You logged in")
-            return redirect(url_for('dash'),username = current_user.username, balance=current_user.balance)
+            return redirect(url_for('dash'))
         flash("Invalid username or password")
         return redirect(url_for("login"))
 
