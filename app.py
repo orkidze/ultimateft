@@ -150,6 +150,8 @@ def event_p(id):
                                 balance=current_user.balance))
     if not database.makeBet(fight,current_user.id,value,text):
         flash("Not enough balance or invalid value")
+    else:
+        flash("You made bet of: <b>" + text+ "</b> units ")
     return redirect(url_for('event', id=id,fights=arr, name=arr1, username = current_user.username, balance=current_user.balance))
 
 
