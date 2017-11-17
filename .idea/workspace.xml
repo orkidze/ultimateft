@@ -94,8 +94,8 @@
       <file leaf-file-name="login_db_adapter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="675">
+              <caret line="104" column="85" lean-forward="false" selection-start-line="104" selection-start-column="85" selection-end-line="104" selection-end-column="85" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -170,10 +170,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2823" />
-    <option name="y" value="-23" />
-    <option name="width" value="459" />
-    <option name="height" value="325" />
+    <option name="x" value="2782" />
+    <option name="y" value="-17" />
+    <option name="width" value="367" />
+    <option name="height" value="260" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -583,8 +583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="675">
+          <caret line="104" column="85" lean-forward="false" selection-start-line="104" selection-start-column="85" selection-end-line="104" selection-end-column="85" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
