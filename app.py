@@ -175,4 +175,4 @@ def dash():
 def bets():
     return render_template('bets.html', username=current_user.username, balance=current_user.balance, list=database.getBets(current_user.id))
 if __name__ == '__main__':
-    app.run()
+    app.run(ssl_context=('cert.pem', 'key.pem'))
