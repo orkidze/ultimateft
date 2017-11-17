@@ -51,7 +51,7 @@ class login_db_adapter:
         return i
     def getFights(self, id):
         i = self.con.execute(
-            "select * from website.fight where evid = '"+id+"'")
+            "select * from website.fight where event_id = '"+id+"'")
         return i
     def getEventName(self,id):
 
@@ -75,5 +75,5 @@ class login_db_adapter:
         return True
     def getBets(self,userID):
 
-        i = self.con.execute("select e.eventename,f.fighter_1,f.fighter_2, b.outcome, b.amount, f.f1koef, f.f2koef, b.status from website.bet b inner join website.users u on b.uid = u.id inner join website.fight f on b.fight = f.fightid inner join website.events e on f.evid = e.eventid where u.id = "+str(userID))
+        i = self.con.execute("select e.event_name,f.fighter_1,f.fighter_2, b.outcome, b.amount, f.koef_1, f.koef_2, b.status from website.bet b inner join website.users u on b.uid = u.id inner join website.fight f on b.fight = f.fightid inner join website.events e on f.evid = e.eventid where u.id = "+str(userID))
         return i
