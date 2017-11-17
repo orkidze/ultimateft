@@ -61,7 +61,11 @@ class login_db_adapter:
         return i
 
     def getFights(self, id):
-        i = self.con.execute(" select fight.fight_id, fighter1.name, fighter2.name, fight.koef_1, fight.koef_2, fight.event_id from website.fight fight left join website.fighter fighter1 on fighter1.fighter_id = fight.fighter_1 left join website.fighter fighter2 on fighter2.fighter_id = fight.fighter_2 where event_id = '"+id+"'")
+        i = self.con.execute(" select fight.fight_id, fighter1.name, fighter2.name, fight.koef_1, "
+                             "fight.koef_2, fight.event_id from website.fight fight left join website.fighter fighter1 "
+                             "on fighter1.fighter_id = fight.fighter_1 left join "
+                             "website.fighter fighter2 on fighter2.fighter_id = "
+                             "fight.fighter_2 where event_id = '"+id+"'")
         return i
 
     def getEventName(self, id):
@@ -84,8 +88,8 @@ class login_db_adapter:
             return False
 
         self.con.execute(
-            "insert into website.bet(fight_id,u_id,outcome,amount,status) values('" + str(fightID) + "'," + str(
-                userID) + "," + str(outcome) + "," + str(amount) + ",'Waiting')")
+            "insert into website.bet(fight_id,u_id,outcome,amount) values('" + str(fightID) + "'," + str(
+                userID) + "," + str(outcome) + "," + str(amount) + ")")
         self.con.execute("update website.users set balance = balance - " + str(amount) + "where id = " + str(userID))
         return True
 
