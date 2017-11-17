@@ -76,9 +76,11 @@ def signup():
     form = RegisterForm()
     if form.validate_on_submit():
         if not database.availableUsername(form.username.data):
-            return "Username taken"
+            flash("Username already taken")
+            return redirect(url_for('signup'))
         if not database.availableEmail(form.email.data):
-            return "Email already taken"
+            flash("Email already taken")
+            return redirect(url_for('signup'))
         hashed_password = generate_password_hash(form.password.data, method='sha256')
         database.signup(form.username.data,hashed_password,form.email.data)
         return redirect(url_for('index'))
