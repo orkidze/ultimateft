@@ -1,5 +1,6 @@
 import sqlalchemy
 import os
+from werkzeug.security import generate_password_hash,check_password_hash
 class login_db_adapter:
     user = "jlemszjdrzdpcp"
     password = "5535447b7c379896937f4111f3d37b2bd8f86da4b9d9e0c84d962779652ef455"
@@ -23,10 +24,10 @@ class login_db_adapter:
 
     def login(self,username,password):
         for i in self.con.execute("select password from website.users where username ='"+username+"'"):
-            if i['password'] != password:
-                return False
-            else:
+            if check_password_hash(i['password'],password):
                 return True
+            else:
+                return False
     def signup(self, username, password, email):
 
         self.con.execute("insert into website.users (username,email,password,balance) values('"+ username +"', '"+email+ "', '"+password+"',1000)")
