@@ -98,10 +98,10 @@ class login_db_adapter:
         i = self.con.execute(
             "select e.event_name,fighter1.name,fighter2.name, b.outcome, b.amount, f.koef_1, f.koef_2, b.status "
             "from website.bet b inner join website.users u "
-            "on b.u_id = u.id inner join website.fight f"
-            "on b.fight_id = f.fight_id inner join website.events e"
-            "on f.event_id = e.event_id"
-            "left join website.fighter fighter1 on fighter1.fighter_id = f.fighter_1"
-            "left join website.fighter fighter2 on fighter2.fighter_id = f.fighter_2"
+            "on b.u_id = u.id inner join website.fight f "
+            "on b.fight_id = f.fight_id inner join website.events e "
+            "on f.event_id = e.event_id "
+            "left join website.fighter fighter1 on fighter1.fighter_id = f.fighter_1 "
+            "left join website.fighter fighter2 on fighter2.fighter_id = f.fighter_2 "
             "where u.id =  " + str(userID))
         return i
