@@ -94,8 +94,8 @@
       <file leaf-file-name="login_db_adapter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="77" column="49" lean-forward="false" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+            <state relative-caret-position="153">
+              <caret line="63" column="309" lean-forward="false" selection-start-line="63" selection-start-column="309" selection-end-line="63" selection-end-column="309" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -583,8 +583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="77" column="49" lean-forward="false" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+        <state relative-caret-position="153">
+          <caret line="63" column="309" lean-forward="false" selection-start-line="63" selection-start-column="309" selection-end-line="63" selection-end-column="309" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
