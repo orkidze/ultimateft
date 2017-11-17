@@ -28,9 +28,15 @@ class login_db_adapter:
                 return True
             else:
                 return False
+    def availableUsername(self,username):
+        i = self.con.execute("select count(id) from website.users where username = '"+username+"'")
+        for item in i:
+            if int(item['count']) == 0:
+                return True
+        return False
     def signup(self, username, password, email):
 
-        self.con.execute("insert into website.users (username,email,password,balance) values('"+ username +"', '"+email+ "', '"+password+"',1000)")
+        self.con.execute("insert into website.users (username,email,password) values('"+ username +"', '"+email+ "', '"+password+"')")
         return
     def getUpcomingEvents(self):
 
