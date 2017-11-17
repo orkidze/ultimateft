@@ -4,6 +4,7 @@ from wtforms import StringField,PasswordField,BooleanField
 from wtforms.validators import InputRequired, length, Email
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from werkzeug.security import generate_password_hash,check_password_hash
 
 from login_db_adapter import login_db_adapter
 
@@ -73,10 +74,10 @@ def signup():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
     form = RegisterForm()
-
     if form.validate_on_submit():
-        database.signup(form.username.data,form.password.data,form.email.data,)
-        return "<h1> You have register! <h1>"
+        hashed_password = generate_password_hash(form.password.data, method='sha256')
+        database.signup(form.username.data,hashed_password,form.email.data)
+        return redirect(url_for('index'))
 
     return render_template('signup.html', form=form)
 
