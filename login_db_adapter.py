@@ -34,6 +34,12 @@ class login_db_adapter:
             if int(item['count']) == 0:
                 return True
         return False
+    def availableEmail(self,email):
+        i = self.con.execute("select count(id) from website.users where email = '"+email+"'")
+        for item in i:
+            if int(item['count']) == 0:
+                return True
+        return False
     def signup(self, username, password, email):
 
         self.con.execute("insert into website.users (username,email,password) values('"+ username +"', '"+email+ "', '"+password+"')")
