@@ -37,6 +37,7 @@ body {
 }
 @media (min-width: 768px) {
   .sidebar {
+
     position: fixed;
     top: 51px;
     bottom: 0;
@@ -47,7 +48,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #1a1a1a;
-    border-right: 1px solid #eee;
+    border-right: 1px solid black;
   }
 }
 
