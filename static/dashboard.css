@@ -68,7 +68,12 @@ body {
   color: black;
   background-color: #d8d8d8;
 }
+.nav-sidebar >  a,
+.nav-sidebar >  a:hover,
+.nav-sidebar > a:focus {
+  color: white;
 
+}
 
 /*
  * Main content
