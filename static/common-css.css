@@ -1,11 +1,12 @@
 body {
   padding-top: 50px;
     /* 1em = 10px
-    background-image: url("img_tree.png");
+
     */
     background-color: #3d3d5c;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-image: url("img/background.jpg");
 }
 .starter-template {
   padding: 40px 15px;
