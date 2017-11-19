@@ -1,6 +1,93 @@
-<!doctype html>
-<title> TITLE ! </title>
-<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='style.css') }} ">
-<h1> This is the home page of: {{ all[0]  }}</h1>
-<h2> The last name : {{ all[1] }} \n</h2>
-<h2> Nationality : {{ all[3] }}</h2>
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+The Ultimate Future Teller DashBoard
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('dash')}}">The Ultimate Future Teller</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">UFC bet
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for('upcomingEvents') }}">Upcoming Events</a></li>
+                        <li><a href="{{ url_for('top50') }}">TOP 50</a></li>
+                        <li><a href="{{ url_for('bets') }}">My bets</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('upcomingEvents') }}">Events</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a>Logged as: <b>{{ username }}</b> Your balance: <b>{{ balance }}</b> </a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+            <li><a href="{{ url_for('dash') }}">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ url_for('bets') }}">My bets</a></li>
+            <li><a href="{{ url_for('upcomingEvents') }}">Upcoming Events</a></li>
+            <li><a href="{{ url_for('top50') }}">TOP 50</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="container-fluid">
+            <div class="container">
+
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">More
+                    about rankings
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Info</h4>
+                            </div>
+                            <div class="modal-body" style="color : black;">
+                                <h4>Belt ranks: </h4>
+                                <ul>
+                                    <li>White belt</li>
+                                    <li>Blue belt</li>
+                                    <li>Purple belt</li>
+                                    <li>Brown belt</li>
+                                    <li>Black belt</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

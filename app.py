@@ -104,6 +104,15 @@ def top50():
     return render_template('top50.html', list=arr, username = current_user.username, balance=current_user.balance)
 
 
+@app.route("/profile")
+@login_required
+def profile():
+    arr = list()
+    for i in database.getUserID(current_user.username):
+        arr.append(i)
+    return render_template('profile.html', list=arr, username = current_user.username, balance=current_user.balance)
+
+
 @app.route("/upcomingEvents")
 @login_required
 def upcomingEvents():
