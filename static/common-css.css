@@ -6,7 +6,7 @@ body {
     background-color: #3d3d5c;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url("img/background.jpg");
+    background-image: url({{ url_for('static', filename='img/background.jpg') }});
 }
 .starter-template {
   padding: 40px 15px;
