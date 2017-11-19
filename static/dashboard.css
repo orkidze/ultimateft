@@ -68,11 +68,15 @@ body {
   color: black;
   background-color: #d8d8d8;
 }
-.nav-sidebar > li > a,
-.nav-sidebar >  li > a:hover,
-.nav-sidebar >  li > a:focus {
+.nav-sidebar > li > a
+ {
   color: white;
-   
+
+}
+.nav-sidebar >  li > a:hover,
+.nav-sidebar >  li > a:focus{
+ color: black;
+  background-color: #d8d8d8;
 }
 
 /*
