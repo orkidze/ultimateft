@@ -51,7 +51,10 @@ body {
     border-right: 1px solid black;
   }
 }
-
+img.belt{
+    width : 20%;
+    height : auto;
+}
 /* Sidebar navigation */
 .nav-sidebar {
   margin-right: -21px; /* 20px padding + 1px border */
