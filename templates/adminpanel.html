@@ -11,6 +11,19 @@ The Ultimate Future Teller
 
 {% block content %}
 Admin panel:
-
+<div class="list-group ">
+    <a class="list-group-item ">
+        <h2 class="list-group-item-heading text-center">Insert fighter</h2>
+        <p class="list-group-item-text text-center">
+        <form method="post">
+            <input type="hidden" name="todo" value="Insert fighter">
+            <div class="text-center" style="padding : 5;"><b>Name</b> <input name="name" type="text"/>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Place your bet</button>
+            </div>
+        </form>
+        </p></a>
+</div>
 
 {% endblock %}
