@@ -97,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/templates/top50.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="777">
-              <caret line="85" column="24" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="85" selection-end-column="24" />
+              <caret line="85" column="24" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="85" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -106,11 +106,11 @@
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="57" column="81" lean-forward="false" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="81" />
+            <state relative-caret-position="738">
+              <caret line="84" column="43" lean-forward="false" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#4318#4325#1" expanded="true" />
+                <element signature="e#4435#4442#1" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -578,7 +578,7 @@
     <entry file="file://$PROJECT_DIR$/templates/top50.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="777">
-          <caret line="85" column="24" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="85" selection-end-column="24" />
+          <caret line="85" column="24" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="85" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -593,11 +593,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="57" column="81" lean-forward="false" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="81" />
+        <state relative-caret-position="738">
+          <caret line="84" column="43" lean-forward="false" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#4318#4325#1" expanded="true" />
+            <element signature="e#4435#4442#1" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
