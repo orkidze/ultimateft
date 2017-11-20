@@ -51,7 +51,9 @@ body {
     border-right: 1px solid black;
   }
 }
-
+.rules{
+    background-image: url("{{url_for('static', filename='img/content/lobov.jpg')}}");
+}
 img.belt{
     width : 40%;
     height : auto;
