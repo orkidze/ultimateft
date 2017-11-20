@@ -108,7 +108,7 @@ def adminpanel():
             for i in database.searchFighter(name):
                 arr.append(i)
             for item in arr:
-                flash("ID: " + item[0][0] + " Name: " + item[0][1])
+                flash("ID: " + item['fighter_id'] + " Name: " + item['Name'])
             return render_template('adminpanel.html')
 
     return render_template('adminpanel.html')
