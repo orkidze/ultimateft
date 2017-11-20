@@ -51,6 +51,12 @@ body {
     border-right: 1px solid black;
   }
 }
+.event{
+    color : white;
+    width : 60%;
+    background-image: url('img/content/holloway.jpg');
+    background-size: 100%;
+}
 .rules{
 
     width : 60%;
