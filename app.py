@@ -104,7 +104,10 @@ def adminpanel():
             return render_template('adminpanel.html')
         if action == "search fighter":
             name = request.form['name']
-            for item in database.searchFighter(name):
+            arr = list()
+            for i in database.searchFighter(name):
+                arr.append(i)
+            for item in arr:
                 flash("ID: " + item['id'] + " Name: " + item['name'])
             return render_template('adminpanel.html')
 
