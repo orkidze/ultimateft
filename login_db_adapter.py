@@ -16,9 +16,14 @@ class login_db_adapter:
         uri = os.environ.get('DATABASE_URL', 'postgres://username:password@192.168.1.42/FLASK_ENTRY')
         self.con = sqlalchemy.create_engine(uri, client_encoding='utf8')
         return
+    def insertFighter(self,name):
+        self.con.execute("insert into website.fighter(name) values('"+name+"')")
+
+    def searchFighter(self,name):
+        for i in self.con.execute("select id, name from website.fighter where name like '%"+name+"%' limit 10"):
+            return i
 
     def getUser(self, id):
-
         for i in self.con.execute("select * from website.users where id =" + id):
             return i
 

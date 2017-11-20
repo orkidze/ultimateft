@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login_db_adapter.py" afterPath="$PROJECT_DIR$/login_db_adapter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/adminpanel.html" afterPath="$PROJECT_DIR$/templates/adminpanel.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,23 +32,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminpanel.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminpanel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/adminpanel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="483">
+              <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#578#585#1" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="177" column="31" lean-forward="false" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
+            <state relative-caret-position="402">
+              <caret line="103" column="46" lean-forward="false" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
               </folding>
@@ -84,11 +88,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="login_db_adapter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="22" column="109" lean-forward="false" selection-start-line="22" selection-start-column="109" selection-end-line="22" selection-end-column="109" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dash.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dash.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="82" column="33" lean-forward="false" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+            <state relative-caret-position="465">
+              <caret line="68" column="25" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="68" selection-end-column="25" />
               <folding>
                 <element signature="e#2967#2974#1" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -106,16 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top50.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/top50.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="85" column="35" lean-forward="false" selection-start-line="75" selection-start-column="25" selection-end-line="85" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -180,7 +186,6 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/login.py" />
-        <option value="$PROJECT_DIR$/login_db_adapter.py" />
         <option value="$PROJECT_DIR$/static/common-css.css" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/signup.html" />
@@ -192,8 +197,9 @@
         <option value="$PROJECT_DIR$/static/dashboard.css" />
         <option value="$PROJECT_DIR$/templates/dash.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/login_db_adapter.py" />
         <option value="$PROJECT_DIR$/templates/adminpanel.html" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -535,16 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1795">
-          <caret line="102" column="40" lean-forward="false" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/bets.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -617,21 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="82" column="33" lean-forward="false" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
-          <folding>
-            <element signature="e#2967#2974#1" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#4334#4341#1" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="822">
@@ -647,16 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="177" column="31" lean-forward="false" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/event.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -665,12 +636,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="22" column="109" lean-forward="false" selection-start-line="22" selection-start-column="109" selection-end-line="22" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="68" column="25" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="68" selection-end-column="25" />
+          <folding>
+            <element signature="e#2967#2974#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#4334#4341#1" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/adminpanel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+        <state relative-caret-position="483">
+          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#578#585#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="103" column="46" lean-forward="false" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#75#0" expanded="true" />
           </folding>
         </state>
       </provider>

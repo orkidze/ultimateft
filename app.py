@@ -95,6 +95,14 @@ def signup():
 def adminpanel():
     if not current_user.admin:
         return redirect(url_for('index'))
+    if request.method == 'POST':
+        action = request.form['todo']
+        if action == 'insert fighter':
+            name = request.form['name']
+            database.insertFighter(name)
+            flash(name +' inserted')
+            return render_template('adminpanel.html')
+
 
     return render_template('adminpanel.html')
 
