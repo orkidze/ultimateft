@@ -21,7 +21,7 @@ class login_db_adapter:
 
     def searchFighter(self,name):
         bucket = list()
-        for i in self.con.execute("select id, name from website.fighter where name like '%"+name+"%' limit 10"):
+        for i in self.con.execute("select id, name from website.fighter where name like '%%"+name+"%%' limit 10"):
             bucket.append(i)
         return bucket
 
