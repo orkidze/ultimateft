@@ -83,10 +83,12 @@ The Ultimate Future Teller DashBoard
             </div>
             <div class="col-md-offset-1 col-md-4">
                 <img src="{{url_for('static', filename='img/belt/white.png')}}" class="belt">
+                <h3>Progress to blue belt ({{ (list[6] - 1000) / 10 }} %)</h3>
                 <div class="progress">
-                    <h3>Progress to blue belt ({{ (list[6] - 1000) / 10 }} %)</h3>
+
                     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ ((list[6] - 1000) / 10 )|int|abs}}"
                          aria-valuemin="0" aria-valuemax="100" style="width:{{ ((list[6] - 1000) / 10 )|int|abs}}%">
+                        Progress
                     </div>
                 </div>
             </div>
