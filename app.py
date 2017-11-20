@@ -102,7 +102,11 @@ def adminpanel():
             database.insertFighter(name)
             flash(name +' inserted')
             return render_template('adminpanel.html')
-
+        if action == "search fighter":
+            name = request.form['name']
+            for item in database.searchFighter(name):
+                flash("ID: " + item['id'] + " Name: " + item['name'])
+            return render_template('adminpanel.html')
 
     return render_template('adminpanel.html')
 
