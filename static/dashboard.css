@@ -53,8 +53,9 @@ body {
 }
 .rules{
     width : 40%;
-    height: 30%;
+    height: 70%;
     background-image: url('img/content/lobov.jpg');
+    background-size: 100%;
 }
 img.belt{
     width : 40%;
