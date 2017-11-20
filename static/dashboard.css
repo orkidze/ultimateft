@@ -54,6 +54,8 @@ body {
 img.belt{
     width : 40%;
     height : auto;
+    display: block;
+    margin: auto;
 }
 /* Sidebar navigation */
 .nav-sidebar {
