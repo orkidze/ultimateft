@@ -52,7 +52,8 @@ body {
   }
 }
 .rules{
-    width : 40%;
+height : 100;
+    width : 35%;
     background-image: url('img/content/lobov.jpg');
     background-size: 100%;
 }
