@@ -1,7 +1,7 @@
 {% extends "bootstrap/base.html" %}
 
 {% block title %}
- The Ultimate Future Teller DashBoard
+The Ultimate Future Teller DashBoard
 {% endblock %}
 
 {% block styles %}
@@ -30,7 +30,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{ url_for('upcomingEvents') }}">Upcoming Events</a></li>
                         <li><a href="{{ url_for('top50') }}">TOP 50</a></li>
-                        <li><a  href="{{ url_for('bets') }}">My bets</a></li>
+                        <li><a href="{{ url_for('bets') }}">My bets</a></li>
                     </ul>
                 </li>
                 <li><a href="{{ url_for('upcomingEvents') }}">Events</a></li>
@@ -45,58 +45,77 @@
     </div>
 </nav>
 <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active" ><a href="{{ url_for('dash') }}">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a  href="{{ url_for('bets') }}">My bets</a></li>
-                <li > <a href="{{ url_for('upcomingEvents') }}">Upcoming Events</a></li>
-                <li><a href="{{ url_for('top50') }}">TOP 50</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-<div class="container-fluid">
-    {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        {% for message in messages %}
-                            <div class="alert alert-warning alert-dismissible" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                {{message}}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
-    <div class="container">
-  <h2>Information about rules and stuff</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">More information</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Info</h4>
-        </div>
-        <div class="modal-body" style="color : black;">
-          <p>This is a fantasy betting website for UFC</p>
-            <h4>Rules</h4>
-            <ul>
-                <li>You bet on UFC fights by picking a winner and putting money on it</li>
-                <li>You get 1000 unit of currency when you begin</li>
-                <li>Currency is reset every 3 month</li>
-                <li>Users with greatest amount of currency gets best spot at the monthly TOP</li>
-                <li>To be continued ... </li>
-            </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
+    <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+            <li class="active"><a href="{{ url_for('dash') }}">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ url_for('bets') }}">My bets</a></li>
+            <li><a href="{{ url_for('upcomingEvents') }}">Upcoming Events</a></li>
+            <li><a href="{{ url_for('top50') }}">TOP 50</a></li>
+        </ul>
     </div>
-  </div>
-    </div></div></div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="container-fluid">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{message}}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <div class="row">
+                <div class="col-md-offset-1 col-md-2 well " style="width : 20%; height : 20%;">
+                    <div class="container">
+                        <h2>Information about rules and stuff</h2>
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
+                            Rules
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Info</h4>
+                                    </div>
+                                    <div class="modal-body" style="color : black;">
+                                        <h4>Rules</h4>
+                                        <ul>
+                                            <li>You bet on UFC fights by picking a winner and putting currency on it
+                                            </li>
+                                            <li>You get 1000 unit of currency when you begin</li>
+                                            <li>Currency is reset every 3 month starting December 1st then March 1st and
+                                                so
+                                                on
+                                            </li>
+                                            <li>After currency reset rankings are recorded and winners are carved in
+                                                stone
+                                                of The great hall of fame
+                                            </li>
+                                            <li>When user makes correct guess user is progressing on ranking</li>
+                                            <li>Users are ranking according to Brazilian Jujitsu belts ranking system
+                                            </li>
+                                            <li>To be continued ...</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
