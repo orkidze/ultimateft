@@ -93,7 +93,7 @@ def signup():
 @app.route("/adminpanel",methods=['GET','POST'])
 @login_required
 def adminpanel():
-    if current_user.admin:
+    if not current_user.admin:
         return redirect(url_for('index'))
 
     return render_template('adminpanel.html')
