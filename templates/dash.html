@@ -67,7 +67,9 @@ The Ultimate Future Teller DashBoard
             {% endfor %}
             {% endif %}
             {% endwith %}
-
+            <div class="row">
+                <a href="{{ url_for('event',id=1) }}"><div class="col-md-offset-1 col-md-8 well event" style="text-align: center;">UFC 218 : Holloway vs Aldo</div></a>
+            </div>
             <div class="row">
                 <div class="col-md-offset-1 col-md-8 well rules" >
                     <div class="container">
@@ -114,6 +116,7 @@ The Ultimate Future Teller DashBoard
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
