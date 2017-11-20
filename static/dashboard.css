@@ -52,7 +52,7 @@ body {
   }
 }
 .rules{
-    background-image: url("{{url_for('static', filename='img/content/lobov.jpg')}}");
+    background-image: url('img/content/lobov.jpg');
 }
 img.belt{
     width : 40%;
