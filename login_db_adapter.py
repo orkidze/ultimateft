@@ -20,10 +20,10 @@ class login_db_adapter:
         self.con.execute("insert into website.fighter(name) values('"+name+"')")
 
     def searchFighter(self,name):
-        list = list()
+        bucket = list()
         for i in self.con.execute("select id, name from website.fighter where name like '%"+name+"%' limit 10"):
-            list.append(i)
-        return list
+            bucket.append(i)
+        return bucket
 
     def getUser(self, id):
         for i in self.con.execute("select * from website.users where id =" + id):
