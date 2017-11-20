@@ -22,18 +22,20 @@ class User(UserMixin):
     password = ""
     email = ""
     balance = ""
-    def __init__(self, id,username,email,password,balance):
+    admin = False;
+    def __init__(self, id,username,email,password,balance,admin):
         self.id = id
         self.username = username
         self.password = password
         self. email = email
         self.balance = balance
+        self.admin = admin;
 
 
 @login_manager.user_loader
 def load_user(user_id):
     i = database.getUser(user_id)
-    return User(user_id,i[1],i[2],i[3],i[4])
+    return User(user_id,i[1],i[2],i[3],i[4],i[7])
 
 
 class LoginForm(FlaskForm):
@@ -86,6 +88,15 @@ def signup():
         return redirect(url_for('index'))
 
     return render_template('signup.html', form=form)
+
+
+@app.route("/adminpanel",methods=['GET','POST'])
+@login_required
+def adminpanel():
+    if current_user.admin:
+        return redirect(url_for('index'))
+
+    return render_template('adminpanel.html')
 
 
 @app.route("/logout")
