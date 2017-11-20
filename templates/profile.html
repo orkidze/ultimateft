@@ -55,7 +55,7 @@ The Ultimate Future Teller DashBoard
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="row">
-            <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white">
+            <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white; color : black ;">
                 <h3>Information</h3>
                 <table class="table ">
                     <tbody>
@@ -81,19 +81,42 @@ The Ultimate Future Teller DashBoard
                     </tbody>
                 </table>
             </div>
+            {% if row[6] >= 7000 %}
+            <td>Black belt</td>
+            {% elif row[6] >= 4500 %}
+            <td>Brown belt</td>
+            {% elif row[6] >= 3000 %}
+            <td>Purple belt</td>
+            {% elif row[6] >= 2000 %}
+            <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white; color: black;">
+                <h3 style="text-align: center;"><b>Ranking</b></h3>
+                <img src="{{url_for('static', filename='img/belt/blue.png')}}" class="belt">
+                <h4 style="text-align: center;">Progress to purple belt ({{ (list[6] - 2000) / 10 }} %)</h4>
+                <div class="progress">
 
-            <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white">
+                    <div class="progress-bar progress-bar-success" role="progressbar"
+                         aria-valuenow="{{ ((list[6] - 2000) / 10 )|int|abs}}"
+                         aria-valuemin="0" aria-valuemax="100" style="width:{{ ((list[6] - 2000) / 10 )|int|abs}}%">
+
+                    </div>
+                </div>
+            </div>
+            {% elif row[6] > 0 %}
+            <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white; color: black;">
                 <h3 style="text-align: center;"><b>Ranking</b></h3>
                 <img src="{{url_for('static', filename='img/belt/white.png')}}" class="belt">
                 <h4 style="text-align: center;">Progress to blue belt ({{ (list[6] - 1000) / 10 }} %)</h4>
                 <div class="progress">
 
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ ((list[6] - 1000) / 10 )|int|abs}}"
+                    <div class="progress-bar progress-bar-success" role="progressbar"
+                         aria-valuenow="{{ ((list[6] - 1000) / 10 )|int|abs}}"
                          aria-valuemin="0" aria-valuemax="100" style="width:{{ ((list[6] - 1000) / 10 )|int|abs}}%">
 
                     </div>
                 </div>
             </div>
+            {% endif %}
+
         </div>
         <div class="row">
             <div class="container-fluid">
