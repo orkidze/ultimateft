@@ -73,7 +73,13 @@ The Ultimate Future Teller
                         <td>{{loop.index0 + 1}}</td>
                         <td>{{ row[1] }}</td>
                         <td>{{ row[4] }}</td>
-                         {% if row[6] >= 2000 %}
+                         {% if row[6] >= 7000 %}
+                        <td>Black belt</td>
+                        {% elif row[6] >= 4500 %}
+                        <td>Brown belt</td>
+                        {% elif row[6] >= 3000 %}
+                        <td>Purple belt</td>
+                         {% elif row[6] >= 2000 %}
                         <td>Blue belt</td>
                         {% elif row[6]  > 0 %}
                         <td>White belt</td>
