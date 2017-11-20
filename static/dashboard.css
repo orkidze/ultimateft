@@ -52,6 +52,8 @@ body {
   }
 }
 .rules{
+    width : 40%;
+    height: 30%;
     background-image: url('img/content/lobov.jpg');
 }
 img.belt{
