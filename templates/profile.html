@@ -82,11 +82,41 @@ The Ultimate Future Teller DashBoard
                 </table>
             </div>
             {% if list[6] >= 7000 %}
-            <td>Black belt</td>
+            <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white; color: black;">
+                <h3 style="text-align: center;"><b>Ranking</b></h3>
+                <img src="{{url_for('static', filename='img/belt/black.png')}}" class="belt">
+                <h4 style="text-align: center;">Progress to 2nd DAN ({{ (list[6] - 7000) / 50 }} %)</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar"
+                         aria-valuenow="{{ ((list[6] - 7000) / 50 )|int|abs}}"
+                         aria-valuemin="0" aria-valuemax="100" style="width:{{ ((list[6] - 7000) / 50 )|int|abs}}%">
+                    </div>
+                </div>
+            </div>
             {% elif list[6] >= 4500 %}
-            <td>Brown belt</td>
+            <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white; color: black;">
+                <h3 style="text-align: center;"><b>Ranking</b></h3>
+                <img src="{{url_for('static', filename='img/belt/brown.png')}}" class="belt">
+                <h4 style="text-align: center;">Progress to black belt ({{ (list[6] - 4500) / 25 }} %)</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar"
+                         aria-valuenow="{{ ((list[6] - 4500) / 25 )|int|abs}}"
+                         aria-valuemin="0" aria-valuemax="100" style="width:{{ ((list[6] - 4500) / 25 )|int|abs}}%">
+                    </div>
+                </div>
+            </div>
             {% elif list[6] >= 3000 %}
-            <td>Purple belt</td>
+            <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white; color: black;">
+                <h3 style="text-align: center;"><b>Ranking</b></h3>
+                <img src="{{url_for('static', filename='img/belt/purple.png')}}" class="belt">
+                <h4 style="text-align: center;">Progress to brown belt ({{ (list[6] - 3000) / 15 }} %)</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar"
+                         aria-valuenow="{{ ((list[6] - 3000) / 15 )|int|abs}}"
+                         aria-valuemin="0" aria-valuemax="100" style="width:{{ ((list[6] - 3000) / 15 )|int|abs}}%">
+                    </div>
+                </div>
+            </div>
             {% elif list[6] >= 2000 %}
             <div class="col-md-offset-1 col-md-4 well" style="border : 3px solid white; color: black;">
                 <h3 style="text-align: center;"><b>Ranking</b></h3>
