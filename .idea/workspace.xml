@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/adminpanel.html" afterPath="$PROJECT_DIR$/templates/adminpanel.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,12 +34,13 @@
       <file leaf-file-name="adminpanel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/adminpanel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="33" column="71" lean-forward="false" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+            <state relative-caret-position="654">
+              <caret line="63" column="58" lean-forward="false" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
               <folding>
-                <element signature="e#578#585#1" expanded="true" />
+                <element signature="e#518#525#1" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#3;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,8 +49,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+            <state relative-caret-position="714">
+              <caret line="116" column="53" lean-forward="false" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
               </folding>
@@ -203,10 +204,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2922" />
-    <option name="y" value="-34" />
-    <option name="width" value="188" />
-    <option name="height" value="133" />
+    <option name="x" value="2347" />
+    <option name="y" value="-28" />
+    <option name="width" value="166" />
+    <option name="height" value="106" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -381,9 +382,10 @@
         <state relative-caret-position="693">
           <caret line="33" column="71" lean-forward="false" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
           <folding>
-            <element signature="e#578#585#1" expanded="true" />
+            <element signature="e#518#525#1" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#3;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -766,20 +768,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/adminpanel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="71" lean-forward="false" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+        <state relative-caret-position="654">
+          <caret line="63" column="58" lean-forward="false" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
           <folding>
-            <element signature="e#578#585#1" expanded="true" />
+            <element signature="e#518#525#1" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#3;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+        <state relative-caret-position="714">
+          <caret line="116" column="53" lean-forward="false" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
           </folding>

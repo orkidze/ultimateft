@@ -110,7 +110,11 @@ def adminpanel():
             for item in arr:
                 flash("ID: " + str(item['fighter_id']) + " Name: " + item['name'])
             return render_template('adminpanel.html')
-
+        if action == "create event":
+            name = request.form['name']
+            date = request.form['date']
+            flash(name + " " + date)
+            return render_template('adminpanel.html')
     return render_template('adminpanel.html')
 
 
