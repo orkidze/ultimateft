@@ -105,5 +105,33 @@ The Ultimate Future Teller
         </form>
         </p></a>
 </div>
+<div class="list-group ">
+    <a class="list-group-item ">
+        <h2 class="list-group-item-heading text-center">Search for fight in event</h2>
+        <p class="list-group-item-text text-center">
+        <form method="post">
+            <input type="hidden" name="todo" value="search fight">
+            <div class="text-center" style="padding : 5;"><b>Event name</b> <input name="name" type="text"/>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Search...</button>
+            </div>
+        </form>
+        </p></a>
+</div>
+<div class="list-group ">
+    <a class="list-group-item ">
+        <h2 class="list-group-item-heading text-center">Give results</h2>
+        <p class="list-group-item-text text-center">
+        <form method="post">
+            <input type="hidden" name="todo" value="fight results">
+            <div class="text-center" style="padding : 5;"><b>FightID</b> <input name="fight_id" type="text"/></div>
+        <div class="text-center" style="margin : 5;"><b>Winner (1 or 2)</b> <input name="fighter" type="text"/></div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+        </p></a>
+</div>
 
 {% endblock %}

@@ -130,6 +130,15 @@ def adminpanel():
             id = request.form['event_id']
             flash(fighter1 + " Vs " +fighter2)
             return redirect(url_for('adminpanel'))
+        if action == "search fight":
+            name = request.form['name']
+            flash(name)
+            return redirect(url_for('adminpanel'))
+        if action == "fight results":
+            fightID = request.form['fight_id']
+            fighter = request.form['fighter']
+            flash(fightID + " " + fighter)
+            return redirect(url_for('adminpanel'))
     return render_template('adminpanel.html')
 
 
