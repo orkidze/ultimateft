@@ -115,6 +115,13 @@ def adminpanel():
             date = request.form['date']
             flash(name + " " + date)
             return render_template('adminpanel.html')
+        if action == "get upcoming":
+            arr = list()
+            for i in database.getUpcomingEvents():
+                arr.append(i)
+            for item in arr:
+                flash("ID: " + str(item['event_id']) + " Name: " + item['event_name'])
+            return render_template('adminpanel.html')
     return render_template('adminpanel.html')
 
 
