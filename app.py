@@ -134,8 +134,7 @@ def adminpanel():
         if action == "search fight":
             name = request.form['name']
             for i in database.searchFight(name):
-                print(i[0])
-                print(i[1])
+                print(i[0][0])
             return redirect(url_for('adminpanel'))
         if action == "fight results":
             fightID = request.form['fight_id']
