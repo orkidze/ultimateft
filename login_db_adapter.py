@@ -120,5 +120,5 @@ class login_db_adapter:
         i = self.con.execute("select event_id from website.events where event_name like '%%"+eventname+"%%'")
         ret = list()
         for item in i:
-            ret.append(self.con.execute("select * from website.fight where event_id = "+item[0]))
+            ret.append(self.con.execute("select * from website.fight where event_id = "+str(item[0])))
         return item
