@@ -61,7 +61,7 @@ def login():
     if form.validate_on_submit():
         if database.login(form.username.data,form.password.data):
             i = database.getUserID(form.username.data)
-            user = User(i[0],i[1],i[2],i[3],i[4])
+            user = User(i[0],i[1],i[2],i[3],i[4],i[7])
             login_user(user, remember = form.remember.data)
             flash("You logged in")
             return redirect(url_for('dash'))
