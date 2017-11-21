@@ -120,8 +120,9 @@ class login_db_adapter:
         i = self.con.execute("select event_id from website.events where event_name like '%%"+eventname+"%%'")
         ret = list()
         for item in i:
-            ret.append(self.con.execute("select fight.fight_id, fighter1.name, fighter2.name, fight.koef_1, fight.koef_2 from website.fight fight left join website.fighter fighter1 "
+            ret.append(self.con.execute("select fight.fight_id, fighter1.name, fighter2.name, fight.koef_1, fight.koef_2, e.event_name from website.fight fight left join website.fighter fighter1 "
                                         "on fighter1.fighter_id = fight.fighter_1 left join "
-                                        "website.fighter fighter2 on fighter2.fighter_id = fight.fighter_2"
+                                        "website.fighter fighter2 on fighter2.fighter_id = fight.fighter_2 "
+                                        "inner join website.events e on e.event_id = fight.event_id"
                                         " where fight.event_id = "+str(item[0])))
         return ret
