@@ -152,6 +152,10 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
+@app.route("/google2b7fb394be91cf80")
+def google():
+    return render_template('google2b7fb394be91cf80.html')
+
 
 @app.route("/top50")
 @login_required
