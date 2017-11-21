@@ -112,3 +112,13 @@ class login_db_adapter:
             "left join website.fighter fighter2 on fighter2.fighter_id = f.fighter_2 "
             "where u.id =  " + str(userID))
         return i
+    def createFight(self,event_id,fighter1,fighter2,koef1,koef2):
+        self.con.execute("insert into fight(event_id,fighter_1,fighter_2,koef_1,koef_2) values("+event_id+","+fighter1+","+fighter2+","+koef1+","+koef2+")")
+        return True
+
+    def searchFight(self,eventname):
+        i = self.con.execute("select event_id from website.event where event_name like '%%"+eventname+"%%'")
+        ret = list()
+        for item in i:
+            ret.append(self.con.execute("select * from website.fight where event_id = "+item[0]))
+        return item

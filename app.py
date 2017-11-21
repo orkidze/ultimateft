@@ -128,11 +128,13 @@ def adminpanel():
             koef1 = request.form['koef_1']
             koef2 = request.form['koef_2']
             id = request.form['event_id']
-            flash(fighter1 + " Vs " +fighter2)
+            database.createFight(id,fighter1,fighter2,koef1,koef2)
+            flash("Fight created")
             return redirect(url_for('adminpanel'))
         if action == "search fight":
             name = request.form['name']
-            flash(name)
+            for i in database.searchFight(name):
+                flash(i[0] +" " + i[1])
             return redirect(url_for('adminpanel'))
         if action == "fight results":
             fightID = request.form['fight_id']
