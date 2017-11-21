@@ -101,7 +101,7 @@ def adminpanel():
             name = request.form['name']
             database.insertFighter(name)
             flash(name +' inserted')
-            return render_template('adminpanel.html')
+            return redirect(url_for('adminpanel'))
         if action == "search fighter":
             name = request.form['name']
             arr = list()
@@ -109,18 +109,26 @@ def adminpanel():
                 arr.append(i)
             for item in arr:
                 flash("ID: " + str(item['fighter_id']) + " Name: " + item['name'])
-            return render_template('adminpanel.html')
+                return redirect(url_for('adminpanel'))
         if action == "create event":
             name = request.form['name']
             date = request.form['date']
             flash(name + " " + date)
-            return render_template('adminpanel.html')
+            return redirect(url_for('adminpanel'))
         if action == "get upcoming":
             arr = list()
             for i in database.getUpcomingEvents():
                 arr.append(i)
             for item in arr:
                 flash("ID: " + str(item['event_id']) + " Name: " + item['event_name'])
+            return redirect(url_for('adminpanel'))
+        if action == "crete fight":
+            fighter1 = request.form['fighter_1']
+            fighter2 = request.form['fighter_2']
+            koef1 = request.form['koef_1']
+            koef2 = request.form['koef_2']
+            id = request.form['event_id']
+            flash(fighter1 + " Vs " +fighter2)
             return redirect(url_for('adminpanel'))
     return render_template('adminpanel.html')
 

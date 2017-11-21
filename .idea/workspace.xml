@@ -34,13 +34,18 @@
       <file leaf-file-name="adminpanel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/adminpanel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="84" column="77" lean-forward="false" selection-start-line="84" selection-start-column="77" selection-end-line="84" selection-end-column="77" />
+            <state relative-caret-position="696">
+              <caret line="100" column="97" lean-forward="false" selection-start-line="100" selection-start-column="97" selection-end-line="100" selection-end-column="97" />
               <folding>
                 <element signature="e#518#525#1" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,8 +54,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="123" column="50" lean-forward="true" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
+            <state relative-caret-position="759">
+              <caret line="131" column="50" lean-forward="false" selection-start-line="131" selection-start-column="50" selection-end-line="131" selection-end-column="50" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
               </folding>
@@ -386,6 +391,11 @@
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,21 +778,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/adminpanel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="84" column="77" lean-forward="false" selection-start-line="84" selection-start-column="77" selection-end-line="84" selection-end-column="77" />
+        <state relative-caret-position="696">
+          <caret line="100" column="97" lean-forward="false" selection-start-line="100" selection-start-column="97" selection-end-line="100" selection-end-column="97" />
           <folding>
             <element signature="e#518#525#1" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#a#0;n#div#5;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="123" column="50" lean-forward="true" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
+        <state relative-caret-position="759">
+          <caret line="131" column="50" lean-forward="false" selection-start-line="131" selection-start-column="50" selection-end-line="131" selection-end-column="50" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
           </folding>

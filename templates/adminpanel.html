@@ -88,5 +88,22 @@ The Ultimate Future Teller
         </form>
         </p></a>
 </div>
+<div class="list-group ">
+    <a class="list-group-item ">
+        <h2 class="list-group-item-heading text-center">Create fight</h2>
+        <p class="list-group-item-text text-center">
+        <form method="post">
+            <input type="hidden" name="todo" value="create fight">
+            <div class="text-center" style="padding : 5;"><b>Event ID: </b> <input name="event_id" type="text"/></div>
+        <div class="text-center" style="padding : 5;"><b>Fighter 1 ID: </b> <input name="fighter_1" type="text"/></div>
+        <div class="text-center" style="padding : 5;"><b>Fighter 1 KOEF: </b> <input name="koef_1" type="text"/></div>
+        <div class="text-center" style="padding : 5;"><b>Fighter 2 ID: </b> <input name="fighter_2" type="text"/></div>
+        <div class="text-center" style="padding : 5;"><b>Fighter 2 Koef: </b> <input name="koef_2" type="text"/></div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Insert</button>
+            </div>
+        </form>
+        </p></a>
+</div>
 
 {% endblock %}
