@@ -117,7 +117,7 @@ class login_db_adapter:
         return True
 
     def searchFight(self,eventname):
-        i = self.con.execute("select event_id from website.event where event_name like '%%"+eventname+"%%'")
+        i = self.con.execute("select event_id from website.events where event_name like '%%"+eventname+"%%'")
         ret = list()
         for item in i:
             ret.append(self.con.execute("select * from website.fight where event_id = "+item[0]))
