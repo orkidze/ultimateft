@@ -121,7 +121,7 @@ def adminpanel():
                 arr.append(i)
             for item in arr:
                 flash("ID: " + str(item['event_id']) + " Name: " + item['event_name'])
-            return render_template('adminpanel.html')
+            return redirect(url_for('adminpanel'))
     return render_template('adminpanel.html')
 
 
