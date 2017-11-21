@@ -121,4 +121,4 @@ class login_db_adapter:
         ret = list()
         for item in i:
             ret.append(self.con.execute("select * from website.fight where event_id = "+str(item[0])))
-        return item
+        return ret
