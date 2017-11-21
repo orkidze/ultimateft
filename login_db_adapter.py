@@ -113,7 +113,7 @@ class login_db_adapter:
             "where u.id =  " + str(userID))
         return i
     def createFight(self,event_id,fighter1,fighter2,koef1,koef2):
-        self.con.execute("insert into fight(event_id,fighter_1,fighter_2,koef_1,koef_2) values("+event_id+","+fighter1+","+fighter2+","+koef1+","+koef2+")")
+        self.con.execute("insert into website.fight(event_id,fighter_1,fighter_2,koef_1,koef_2) values("+event_id+","+fighter1+","+fighter2+","+koef1+","+koef2+")")
         return True
 
     def searchFight(self,eventname):
