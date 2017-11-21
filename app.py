@@ -122,7 +122,7 @@ def adminpanel():
             for item in arr:
                 flash("ID: " + str(item['event_id']) + " Name: " + item['event_name'])
             return redirect(url_for('adminpanel'))
-        if action == "crete fight":
+        if action == "create fight":
             fighter1 = request.form['fighter_1']
             fighter2 = request.form['fighter_2']
             koef1 = request.form['koef_1']
