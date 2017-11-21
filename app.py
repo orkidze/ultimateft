@@ -113,7 +113,8 @@ def adminpanel():
         if action == "create event":
             name = request.form['name']
             date = request.form['date']
-            flash(name + " " + date)
+            database.createEvent(name,date)
+            flash("Event created")
             return redirect(url_for('adminpanel'))
         if action == "get upcoming":
             arr = list()

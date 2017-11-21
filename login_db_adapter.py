@@ -124,5 +124,8 @@ class login_db_adapter:
                                         "on fighter1.fighter_id = fight.fighter_1 left join "
                                         "website.fighter fighter2 on fighter2.fighter_id = fight.fighter_2 "
                                         "inner join website.events e on e.event_id = fight.event_id"
-                                        " where fight.event_id = "+str(item[0])))
+                                        " where fight.event_id = "+str(item[0]) + " limit 15"))
         return ret
+
+    def createEvent(self,name,date):
+        self.con.execute("inesrt into website.events(event_name,event_date) values('"+name+"','to_date('"+date+"','DD-MM-YYYY'))")
