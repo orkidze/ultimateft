@@ -128,4 +128,4 @@ class login_db_adapter:
         return ret
 
     def createEvent(self,name,date):
-        self.con.execute("insert into website.events(event_name,event_date) values('"+name+"','to_date('"+date+"','YYYY-MM-DD'))")
+        self.con.execute("insert into website.events(event_name,event_date) values('"+name+"',to_date('"+date+"','YYYY-MM-DD'))")

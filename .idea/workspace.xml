@@ -109,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="738">
-              <caret line="130" column="125" lean-forward="false" selection-start-line="130" selection-start-column="125" selection-end-line="130" selection-end-column="125" />
+              <caret line="130" column="94" lean-forward="true" selection-start-line="130" selection-start-column="94" selection-end-line="130" selection-end-column="94" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -798,7 +798,7 @@
     <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
-          <caret line="130" column="125" lean-forward="false" selection-start-line="130" selection-start-column="125" selection-end-line="130" selection-end-column="125" />
+          <caret line="130" column="94" lean-forward="true" selection-start-line="130" selection-start-column="94" selection-end-line="130" selection-end-column="94" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
