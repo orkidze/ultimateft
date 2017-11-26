@@ -13,3 +13,7 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+.navbar.navbar-default {
+background-image: url('img/cover.jpg');
+    background-size: 100%;
+}
