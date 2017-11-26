@@ -84,7 +84,7 @@ header {
 
 @media (max-width: 768px) {
   .navbar-toggle {
-   /* background: #000 !important;*/
+    background: #A9A9A9 !important;
   }
 }
 
