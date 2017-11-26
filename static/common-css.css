@@ -95,21 +95,7 @@ header {
   padding-right: 0;
 }
 
-.grey {
-  background: grey;
-}
 
-.blue {
-  background: #00BFFF;
-}
-
-.orange {
-  background: #FF8C00;
-}
-
-.green {
-  background: #6B8E23;
-}
 
 .tabStrip ul li a {
   color: #fff;
