@@ -165,7 +165,7 @@ class login_db_adapter:
                                                                                                                                                                                                                                                                                                                                                                                                                              " from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id")
             self.con.execute("update website.users u set alltimelost = alltimelost + (select sum(b.amount) "
                              "from website.bet b, website.fight f, website.users u "
-                             "where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) "
-                                                                                 "from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id")
+                             "where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) "
+                                                                                 "from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id")
             self.con.execute("update website.bet set status = 'Won' where fight_id = " + fightid + " and outcome = 2")
             self.con.execute("update website.bet set status = 'Lost' where fight_id = " + fightid + " and outcome = 1")
