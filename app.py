@@ -141,6 +141,7 @@ def adminpanel():
         if action == "fight results":
             fightID = request.form['fight_id']
             fighter = request.form['fighter']
+            database.fightResults(fightID,fighter)
             flash(fightID + " " + fighter)
             return redirect(url_for('adminpanel'))
     return render_template('adminpanel.html')

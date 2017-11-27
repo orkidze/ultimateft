@@ -132,4 +132,19 @@ class login_db_adapter:
         self.con.execute("insert into website.events(event_name,event_date) values('"+name+"',to_date('"+date+"','YYYY-MM-DD'))")
 
     def fightResults(self,fightid,winner):
-        self.con.execute()
+
+        if winner == 1:
+            self.con.execute("update website.users u set u.balance = u.balance +( b.amount * b.koef_1 ) , u.elo = u.elo + ( b.amount * b.koef_1 )"
+                             " , u.alltimewon = ( b.amount * b.koef_1 )  inner join "
+                         "website.bet b on u.id = b.u_id where b.fight_id = "+fightid+" and b.outcome = 1  ")
+            self.con.execute("update website.bet set status = 'Won' where fight_id = " + fightid + " and outcome = 1")
+            self.con.execute("update website.bet set status = 'Lost' where fight_id = " + fightid + " and outcome = 2")
+
+        if winner == 2:
+            self.con.execute(
+                "update website.users u set u.balance = u.balance +( b.amount * b.koef_1 ) , u.elo = u.elo + ( b.amount * b.koef_1 ) "
+                ", u.alltimewon = ( b.amount * b.koef_1 ) inner join "
+                "website.bet b on u.id = b.u_id where b.fight_id = " + fightid + " and b.outcome = 2  ")
+
+            self.con.execute("update website.bet set status = 'Won' where fight_id = " + fightid + " and outcome = 2")
+            self.con.execute("update website.bet set status = 'Lost' where fight_id = " + fightid + " and outcome = 1")
