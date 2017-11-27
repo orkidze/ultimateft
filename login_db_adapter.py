@@ -16,12 +16,14 @@ class login_db_adapter:
         uri = os.environ.get('DATABASE_URL', 'postgres://username:password@192.168.1.42/FLASK_ENTRY')
         self.con = sqlalchemy.create_engine(uri, client_encoding='utf8')
         return
-    def insertFighter(self,name):
-        self.con.execute("insert into website.fighter(name) values('"+name+"')")
 
-    def searchFighter(self,name):
+    def insertFighter(self, name):
+        self.con.execute("insert into website.fighter(name) values('" + name + "')")
+
+    def searchFighter(self, name):
         bucket = list()
-        for i in self.con.execute("select fighter_id, name from website.fighter where name like '%%"+name+"%%' limit 10"):
+        for i in self.con.execute(
+                                "select fighter_id, name from website.fighter where name like '%%" + name + "%%' limit 10"):
             bucket.append(i)
         return bucket
 
@@ -113,35 +115,42 @@ class login_db_adapter:
             "where u.id =  " + str(userID))
         return i
 
-    def createFight(self,event_id,fighter1,fighter2,koef1,koef2):
-        self.con.execute("insert into website.fight(event_id,fighter_1,fighter_2,koef_1,koef_2) values("+event_id+","+fighter1+","+fighter2+","+koef1+","+koef2+")")
+    def createFight(self, event_id, fighter1, fighter2, koef1, koef2):
+        self.con.execute(
+            "insert into website.fight(event_id,fighter_1,fighter_2,koef_1,koef_2) values(" + event_id + "," + fighter1 + "," + fighter2 + "," + koef1 + "," + koef2 + ")")
         return True
 
-    def searchFight(self,eventname):
-        i = self.con.execute("select event_id from website.events where event_name like '%%"+eventname+"%%'")
+    def searchFight(self, eventname):
+        i = self.con.execute("select event_id from website.events where event_name like '%%" + eventname + "%%'")
         ret = list()
         for item in i:
-            ret.append(self.con.execute("select fight.fight_id, fighter1.name, fighter2.name, fight.koef_1, fight.koef_2, e.event_name from website.fight fight left join website.fighter fighter1 "
-                                        "on fighter1.fighter_id = fight.fighter_1 left join "
-                                        "website.fighter fighter2 on fighter2.fighter_id = fight.fighter_2 "
-                                        "inner join website.events e on e.event_id = fight.event_id"
-                                        " where fight.event_id = "+str(item[0]) + " limit 15"))
+            ret.append(self.con.execute(
+                "select fight.fight_id, fighter1.name, fighter2.name, fight.koef_1, fight.koef_2, e.event_name from website.fight fight left join website.fighter fighter1 "
+                "on fighter1.fighter_id = fight.fighter_1 left join "
+                "website.fighter fighter2 on fighter2.fighter_id = fight.fighter_2 "
+                "inner join website.events e on e.event_id = fight.event_id"
+                " where fight.event_id = " + str(item[0]) + " limit 15"))
         return ret
 
-    def createEvent(self,name,date):
-        self.con.execute("insert into website.events(event_name,event_date) values('"+name+"',to_date('"+date+"','YYYY-MM-DD'))")
+    def createEvent(self, name, date):
+        self.con.execute(
+            "insert into website.events(event_name,event_date) values('" + name + "',to_date('" + date + "','YYYY-MM-DD'))")
 
-    def fightResults(self,fightid,winner):
+    def fightResults(self, fightid, winner):
 
         if winner == 1:
             self.con.execute("update website.users u "
                              "set balance = balance + "
                              "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1), "
-                             "elo = elo + "
-                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1), "
-                             "alltimewon = alltimewon + "
-                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1)"
-                             " from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id")
+                                                                                                                                                             "elo = elo + "
+                                                                                                                                                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1), "
+                                                                                                                                                                                                                                                                                             "alltimewon = alltimewon + "
+                                                                                                                                                                                                                                                                                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1)"
+                                                                                                                                                                                                                                                                                                                                                                                                                             " from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id")
+            self.con.execute("update website.users u set alltimelost = alltimelost + (select sum(b.amount) "
+                             "from website.bet b, website.fight f, website.users u "
+                             "where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) "
+                                                                                 "from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id")
             self.con.execute("update website.bet set status = 'Won' where fight_id = " + fightid + " and outcome = 1")
             self.con.execute("update website.bet set status = 'Lost' where fight_id = " + fightid + " and outcome = 2")
 
@@ -149,11 +158,14 @@ class login_db_adapter:
             self.con.execute("update website.users u "
                              "set balance = balance + "
                              "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2), "
-                            "elo = elo + "
-                            "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2), "
-                         "alltimewon = alltimewon + "
-                       "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2)"
-                     " from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id")
-
+                                                                                                                                                             "elo = elo + "
+                                                                                                                                                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2), "
+                                                                                                                                                                                                                                                                                             "alltimewon = alltimewon + "
+                                                                                                                                                                                                                                                                                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2)"
+                                                                                                                                                                                                                                                                                                                                                                                                                             " from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id")
+            self.con.execute("update website.users u set alltimelost = alltimelost + (select sum(b.amount) "
+                             "from website.bet b, website.fight f, website.users u "
+                             "where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) "
+                                                                                 "from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id")
             self.con.execute("update website.bet set status = 'Won' where fight_id = " + fightid + " and outcome = 2")
             self.con.execute("update website.bet set status = 'Lost' where fight_id = " + fightid + " and outcome = 1")
