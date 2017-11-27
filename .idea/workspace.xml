@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="" />
+    <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/background.jpg" afterPath="$PROJECT_DIR$/static/img/background.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/common-css.css" afterPath="$PROJECT_DIR$/static/common-css.css" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +57,8 @@
       <file leaf-file-name="common-css.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/common-css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="147">
+              <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -815,8 +818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/common-css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="147">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding />
         </state>
       </provider>

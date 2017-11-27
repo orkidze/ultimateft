@@ -4,11 +4,12 @@ body {
   background-image: url('static/img/background.jpg');
    padding-top: 150px;
    background-color: #696969;
+   background-repeat: no-repeat;
+    background-attachment: fixed;
     */
 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #1a1a1a;
+
+    background: url('img/background.jpg') repeat;
 
 }
 header {
