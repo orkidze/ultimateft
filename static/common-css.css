@@ -3,11 +3,12 @@ body {
     /* 1em = 10px
   background-image: url('static/img/background.jpg');
    padding-top: 150px;
+   background-color: #696969;
     */
 
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #696969;
+    background-color: black;
 
 }
 header {
