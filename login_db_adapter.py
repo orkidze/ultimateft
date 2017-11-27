@@ -134,17 +134,26 @@ class login_db_adapter:
     def fightResults(self,fightid,winner):
 
         if winner == 1:
-            self.con.execute("update website.users u set u.balance = u.balance +( b.amount * b.koef_1 ) , u.elo = u.elo + ( b.amount * b.koef_1 )"
-                             " , u.alltimewon = ( b.amount * b.koef_1 )  inner join "
-                         "website.bet b on u.id = b.u_id where b.fight_id = "+fightid+" and b.outcome = 1  ")
+            self.con.execute("update website.users u "
+                             "set balance = balance + "
+                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1), "
+                             "elo = elo + "
+                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1), "
+                             "alltimewon = alltimewon + "
+                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1)"
+                             " from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id")
             self.con.execute("update website.bet set status = 'Won' where fight_id = " + fightid + " and outcome = 1")
             self.con.execute("update website.bet set status = 'Lost' where fight_id = " + fightid + " and outcome = 2")
 
         if winner == 2:
-            self.con.execute(
-                "update website.users u set u.balance = u.balance +( b.amount * b.koef_1 ) , u.elo = u.elo + ( b.amount * b.koef_1 ) "
-                ", u.alltimewon = ( b.amount * b.koef_1 ) inner join "
-                "website.bet b on u.id = b.u_id where b.fight_id = " + fightid + " and b.outcome = 2  ")
+            self.con.execute("update website.users u "
+                             "set balance = balance + "
+                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2), "
+                            "elo = elo + "
+                            "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2), "
+                         "alltimewon = alltimewon + "
+                       "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2)"
+                     " from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id")
 
             self.con.execute("update website.bet set status = 'Won' where fight_id = " + fightid + " and outcome = 2")
             self.con.execute("update website.bet set status = 'Lost' where fight_id = " + fightid + " and outcome = 1")
