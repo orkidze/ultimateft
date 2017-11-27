@@ -64,7 +64,7 @@ class login_db_adapter:
     def getUpcomingEvents(self):
 
         i = self.con.execute(
-            "select * from website.events")
+            "select * from website.events where event_date > now() ")
         return i
 
     def getFights(self, id):
