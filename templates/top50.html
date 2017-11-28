@@ -63,6 +63,7 @@ The Ultimate Future Teller
                     <tr>
                         <th>Place</th>
                         <th>Username</th>
+                        <th>Total in winnings</th>
                         <th>Currency</th>
                         <th>Rank</th>
                     </tr>
@@ -72,6 +73,7 @@ The Ultimate Future Teller
                     <tr>
                         <td>{{loop.index0 + 1}}</td>
                         <td>{{ row[1] }}</td>
+                        <td>{{ row[8] }}</td>
                         <td>{{ row[4] }}</td>
                          {% if row[6] >= 7000 %}
                         <td>Black belt</td>

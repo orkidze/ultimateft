@@ -86,7 +86,7 @@ class login_db_adapter:
     def getTop50(self):
 
         i = self.con.execute(
-            "select * from website.users order by balance desc limit 50 ")
+            "select * from website.users order by alltimewon desc limit 50 ")
         return i
 
     def makeBet(self, fightID, userID, outcome, amount):
