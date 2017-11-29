@@ -109,7 +109,8 @@ def adminpanel():
                 arr.append(i)
             for item in arr:
                 flash("ID: " + str(item['fighter_id']) + " Name: " + item['name'])
-                return redirect(url_for('adminpanel'))
+
+            return redirect(url_for('adminpanel'))
         if action == "create event":
             name = request.form['name']
             date = request.form['date']
