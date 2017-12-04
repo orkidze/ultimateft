@@ -158,8 +158,8 @@ class login_db_adapter:
             self.con.execute("update website.users u "
                              "set balance = balance + "
                              "((select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2), "
-                                                                                                                                                             "elo = elo + "
-                                                                                                                                                             "((select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2) - (select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id), "
+                             "elo = elo + "
+                             "((select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2) - (select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id), "
                                                                                                                                                                                                                                                                                              " alltimewon = alltimewon + "
                                                                                                                                                                                                                                                                                              "((select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id) * f.koef_2) - (select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id)"
                                                                                                                                                                                                                                                                                                                                                                                                                              " from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 2 and f.fight_id = b.fight_id")
@@ -172,11 +172,9 @@ class login_db_adapter:
 
     def cancelFight(self,fightid):
         stm = "update website.users u set balance = balance + "
-        stm.append("(select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and f.fight_id = b.fight_id)")
+        "(select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and f.fight_id = b.fight_id)"
         self.con.execute(stm)
-        stm = "delete from website.bet where fight_id = "
-        stm.append(fightid)
+        stm = "delete from website.bet where fight_id = "+fightid
         self.con.execute(stm)
-        stm = "delete from website.bet where fight_id = "
-        stm.append(fightid)
+        stm = "delete from website.bet where fight_id = "+fightid
         self.con.execute(stm)

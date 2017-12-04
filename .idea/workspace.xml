@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login_db_adapter.py" afterPath="$PROJECT_DIR$/login_db_adapter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/adminpanel.html" afterPath="$PROJECT_DIR$/templates/adminpanel.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="588">
@@ -101,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_db_adapter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login_db_adapter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="178" column="29" lean-forward="true" selection-start-line="178" selection-start-column="29" selection-end-line="178" selection-end-column="29" />
+            <state relative-caret-position="662">
+              <caret line="178" column="65" lean-forward="false" selection-start-line="178" selection-start-column="65" selection-end-line="178" selection-end-column="65" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -187,9 +185,9 @@
         <option value="$PROJECT_DIR$/templates/top50.html" />
         <option value="$PROJECT_DIR$/templates/dash.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/login_db_adapter.py" />
         <option value="$PROJECT_DIR$/templates/adminpanel.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/login_db_adapter.py" />
       </list>
     </option>
   </component>
@@ -784,16 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="178" column="29" lean-forward="true" selection-start-line="178" selection-start-column="29" selection-end-line="178" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/adminpanel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -822,6 +810,16 @@
           <caret line="145" column="42" lean-forward="true" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="178" column="65" lean-forward="false" selection-start-line="178" selection-start-column="65" selection-end-line="178" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
