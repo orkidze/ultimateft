@@ -141,7 +141,7 @@ class login_db_adapter:
         if winner == 1:
             self.con.execute("update website.users u "
                              "set balance = balance + "
-                             "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1), "
+                             "((select sum(b.amount) from website.bet b, website.fight f,  u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1), "
                                                                                                                                                              "elo = elo + "
                                                                                                                                                              "((select sum(b.amount) from website.bet b, website.fight f, website.users u where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id) * f.koef_1), "
                                                                                                                                                                                                                                                                                              "alltimewon = alltimewon + "
