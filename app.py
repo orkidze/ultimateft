@@ -145,6 +145,11 @@ def adminpanel():
             database.fightResults(fightID,int(fighter))
             flash(fightID + " " + fighter)
             return redirect(url_for('adminpanel'))
+        if action == "cancel fight":
+            fightID = request.form['fight_id']
+            database.cancelFight(fightID)
+            flash("Canceled")
+            return redirect(url_for('adminpanel'))
     return render_template('adminpanel.html')
 
 

@@ -169,3 +169,14 @@ class login_db_adapter:
                                                                                  "from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and b.outcome = 1 and f.fight_id = b.fight_id")
             self.con.execute("update website.bet set status = 'Won' where fight_id = " + fightid + " and outcome = 2")
             self.con.execute("update website.bet set status = 'Lost' where fight_id = " + fightid + " and outcome = 1")
+
+    def cancelFight(self,fightid):
+        stm = "update website.users u set balance = balance + "
+        stm.append("(select sum(b.amount) from website.bet b, website.fight f where u.id = b.u_id and b.fight_id = " + fightid + " and f.fight_id = b.fight_id)")
+        self.con.execute(stm)
+        stm = "delete from website.bet where fight_id = "
+        stm.append(fightid)
+        self.con.execute(stm)
+        stm = "delete from website.bet where fight_id = "
+        stm.append(fightid)
+        self.con.execute(stm)
