@@ -1,10 +1,11 @@
-from flask import Flask, request, render_template, url_for, redirect, flash
+from flask import Flask, request, render_template, url_for, redirect, flash, json
 from flask_wtf import FlaskForm
 from wtforms import StringField,PasswordField,BooleanField
 from wtforms.validators import InputRequired, length, Email
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash,check_password_hash
+from functools import  wraps
 
 from login_db_adapter import login_db_adapter
 
@@ -15,6 +16,14 @@ database = login_db_adapter()
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+
+def to_json(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        get_fun = func(*args, **kwargs)
+        return json.dumps(get_fun)
+
+    return wrapper
 
 class User(UserMixin):
     id =""
