@@ -1,21 +1,17 @@
+from functools import wraps
+
 from flask import Flask, request, render_template, url_for, redirect, flash, json
-from flask_wtf import FlaskForm
-from wtforms import StringField,PasswordField,BooleanField
-from wtforms.validators import InputRequired, length, Email
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-from werkzeug.security import generate_password_hash,check_password_hash
-from functools import  wraps
+from flask_wtf import FlaskForm
+from werkzeug.security import generate_password_hash
+from wtforms import StringField, PasswordField, BooleanField
+from wtforms.validators import InputRequired, length, Email
+
 
 from login_db_adapter import login_db_adapter
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'verysecretsecretkey'
-Bootstrap(app)
-database = login_db_adapter()
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = 'login'
+
 
 def to_json(func):
     @wraps(func)
@@ -24,6 +20,9 @@ def to_json(func):
         return json.dumps(get_fun)
 
     return wrapper
+
+
+
 
 class User(UserMixin):
     id =""
