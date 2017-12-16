@@ -1,6 +1,6 @@
 import datetime
 def isBeforeNow(date):
-    now = datetime.datetime.now()
+    now = datetime.date.now()
     if(date<now):
         return True
     else:
