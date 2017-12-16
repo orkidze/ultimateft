@@ -205,7 +205,7 @@ def past_event(id):
         arr1.append(i)
     for i in database.getFights(id):
         arr.append(i)
-    return render_template('event.html', fights=arr, name=arr1, username=current_user.username,
+    return render_template('event_past.html', fights=arr, name=arr1, username=current_user.username,
                            balance=current_user.balance)
 
 @app.route('/event/<id>',methods=['GET'])
