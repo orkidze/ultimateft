@@ -215,11 +215,11 @@ def event(id):
     arr1 = list()
     for i in database.getEventName(id):
         arr1.append(i)
-    if tools.isBeforeNow(arr1[0][1]):
-        return redirect(url_for('past_event', fights=arr, name=arr1, username=current_user.username,
-                               balance=current_user.balance))
     for i in database.getFights(id):
         arr.append(i)
+    if tools.isBeforeNow(arr1[0][1]):
+        return redirect(url_for('past_event', id=id, fights=arr, name=arr1, username=current_user.username,
+                                balance=current_user.balance))
 
     return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance)
 
