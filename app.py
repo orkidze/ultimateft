@@ -197,7 +197,7 @@ def index():
     return render_template('index.html', isOnline = isOnline)
 
 
-@app.route('past_event/<id>',methods=['GET'])
+@app.route('/past_event/<id>',methods=['GET'])
 def past_event(id):
     arr = list()
     arr1 = list()
