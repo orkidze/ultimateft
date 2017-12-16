@@ -5,9 +5,8 @@ from wtforms.validators import InputRequired, length, Email
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash,check_password_hash
-
 from login_db_adapter import login_db_adapter
-
+import tools
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'verysecretsecretkey'
 Bootstrap(app)
@@ -198,6 +197,17 @@ def index():
     return render_template('index.html', isOnline = isOnline)
 
 
+@app.route('past_event/<id>',methods=['GET'])
+def past_event(id):
+    arr = list()
+    arr1 = list()
+    for i in database.getEventName(id):
+        arr1.append(i)
+    for i in database.getFights(id):
+        arr.append(i)
+    return render_template('event.html', fights=arr, name=arr1, username=current_user.username,
+                           balance=current_user.balance)
+
 @app.route('/event/<id>',methods=['GET'])
 @login_required
 def event(id):
@@ -205,8 +215,12 @@ def event(id):
     arr1 = list()
     for i in database.getEventName(id):
         arr1.append(i)
+    if tools.isBeforeNow(arr1[0][1]):
+        return render_template('event.html', fights=arr, name=arr1, username=current_user.username,
+                               balance=current_user.balance)
     for i in database.getFights(id):
         arr.append(i)
+    
     return render_template('event.html', fights=arr, name=arr1, username = current_user.username, balance=current_user.balance)
 
 

@@ -1,0 +1,88 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+The Ultimate Future Teller
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('dash')}}">The Ultimate Future Teller</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">UFC bet
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for('upcomingEvents') }}">Upcoming Events</a></li>
+                        <li><a href="{{ url_for('top50') }}">TOP 50</a></li>
+                        <li><a href="{{ url_for('bets') }}">My bets</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('upcomingEvents') }}">Events</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a>Logged as: <b>{{ username }}</b> Your balance: <b>{{ balance }}</b> </a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li><a href="{{ url_for('dash') }}">Overview <span class="sr-only">(current)</span></a></li>
+                <li><a href="{{ url_for('bets') }}">My bets</a></li>
+                <li class="active"><a href="{{ url_for('upcomingEvents') }}">Upcoming Events</a></li>
+                <li><a href="{{ url_for('top50') }}">TOP 50</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="container">
+
+                <h1>{{ name[0][0] }}</h1>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% for row in fights %}
+                <div class="list-group ">
+                    <a class="list-group-item ">
+                        <h2 class="list-group-item-heading text-center">{{ row[1] }} vs {{ row[2] }}</h2>
+                        </a>
+                </div>
+                {% endfor %}
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

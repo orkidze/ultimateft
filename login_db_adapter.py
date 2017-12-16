@@ -80,7 +80,7 @@ class login_db_adapter:
     def getEventName(self, id):
 
         i = self.con.execute(
-            "select event_name from website.events where event_id = '" + id + "'")
+            "select event_name, event_date from website.events where event_id = '" + id + "'")
         return i
 
     def getTop50(self):
