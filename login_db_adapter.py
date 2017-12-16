@@ -14,7 +14,7 @@ class login_db_adapter:
         url = 'postgresql://{}:{}@{}:{}/{}'
         url = url.format(self.user, self.password, self.host, self.port, self.db)
         uri = os.environ.get('DATABASE_URL', 'postgres://username:password@192.168.1.42/FLASK_ENTRY')
-        self.con = sqlalchemy.create_engine(uri, client_encoding='utf8')
+        self.con = sqlalchemy.create_engine(uri,pool_size=3, client_encoding='utf8')
         return
 
     def insertFighter(self, name):
