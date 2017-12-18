@@ -136,8 +136,8 @@ a:link {
 color: white;
 }
 a:visited {
-    color: white;
+    color: grey;
 }
 a:hover {
-    color: grey;
+    color: white;
 }
