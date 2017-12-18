@@ -5,12 +5,14 @@ from wtforms.validators import InputRequired, length, Email
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash,check_password_hash
-from login_db_adapter import login_db_adapter
+import login_db_adapter
 import tools
+import media_db_adapter
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'verysecretsecretkey'
 Bootstrap(app)
 database = login_db_adapter()
+db_media = media_db_adapter()
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
@@ -255,10 +257,11 @@ def event_p(id):
 
 @app.route('/top5')
 def top5s():
+    arr = db_media.getTop5s()
     isOnline = False
     if current_user.is_authenticated:
         isOnline = True
-    return render_template('top5s.html', isOnline = isOnline)
+    return render_template('top5s.html', isOnline = isOnline, list = arr)
 
 @app.route('/top5/<id>')
 def top5_post(id):

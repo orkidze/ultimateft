@@ -14,3 +14,11 @@ class media_db_adapter:
         uri = os.environ.get('DATABASE_URL', 'postgres://username:password@192.168.1.42/FLASK_ENTRY')
         self.con = sqlalchemy.create_engine(uri, pool_size=5, client_encoding='utf8')
         return
+
+    def getTop5s(self):
+        i = self.con.execute('select id,title,picture from website.top5')
+        return i
+
+    def getTop5(self,id):
+        i = self.con.execute('select * from website.top5 where id = ' + id)
+        return i

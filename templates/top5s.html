@@ -46,10 +46,17 @@ Top 5's
 </nav>
 
 <div class="row">
-    <div class="col-md-offset-1 col-md-3">1</div>
-    <div class="col-md-offset-1 col-md-3">2
-    </div>
-    <div class="col-md-offset-1 col-md-3">3</div>
+
+    {% for item in list %}
+    {% if loop.index % 3 == 0 %}
+</div>
+<div class="row">
+    <div class="col-md-offset-1 col-md-3 pagination-centered text-center">{{ item[1] }}</div>
+    {% else %}
+    <div class="col-md-offset-1 col-md-3 pagination-centered text-center">{{ item[1] }}</div>
+    {% endif %}
+    {% endfor %}
+
 </div>
 
 {% endblock %}
