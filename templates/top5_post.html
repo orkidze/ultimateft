@@ -48,8 +48,8 @@ Top 5's
 <div class="row">
     <div class="col-md-offset-2 col-md-8">some random ass text
     {% for row in list %}
-        <h1>{{row[1]}}</h1>
-        <h2>{{row[3]}}</h2>
+        <h1>{{row[1] |safe}}</h1>
+        <h2>{{row[3] |safe}}</h2>
         {% endfor %}
 
     </div>
