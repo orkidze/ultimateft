@@ -20,5 +20,5 @@ class media_db_adapter:
         return i
 
     def getTop5(self,id):
-        i = self.con.execute('select t.id, t.title, t.picture, t.content, t.date, u.username, t.date from website.top5 t inner join website.users u on t.author = u.id where t.id = '+id)
-        return i
+        for i in self.con.execute('select t.id, t.title, t.picture, t.content, t.date, u.username, t.date from website.top5 t inner join website.users u on t.author = u.id where t.id = '+id)
+            return i
