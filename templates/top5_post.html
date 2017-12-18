@@ -50,7 +50,7 @@ Top 5's
     {% for row in list %}
         <h1>{{row[1] |safe}}</h1>
         {{row[3] |safe}}
-        <h3>Author: {{ row[5] }} . Date: {{ row[6] }}</h3>
+        <h5>Author: {{ row[5] }}, {{ row[6] }}</h5>
         {% endfor %}
 
     </div>
