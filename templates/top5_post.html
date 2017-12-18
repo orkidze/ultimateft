@@ -1,8 +1,7 @@
 {% extends "bootstrap/base.html" %}
 
 {% block title %}
-{% for row in list %}
-{{row[1]}}
+{{ list[1] }}
 {% endblock %}
 
 {% block styles %}
@@ -46,9 +45,9 @@
     </div>
 </nav>
 
-<div class="row pagination-centered">
+<div class="row">
     <div class="col-md-offset-2 col-md-8">
-    
+    {% for row in list %}
         <h1>{{row[1] |safe}}</h1>
         {{row[3] |safe}}
         <h5>Author: {{ row[5] }}, {{ row[6] }}</h5>
