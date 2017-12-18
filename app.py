@@ -253,6 +253,10 @@ def event_p(id):
     #return redirect(url_for('event', id=id,fights=arr, name=arr1, username = current_user.username, balance=current_user.balance))
 
 
+@app.route('/top5')
+def top5s():
+    return render_template('top5s.html')
+
 @app.route('/dash')
 @login_required
 def dash():

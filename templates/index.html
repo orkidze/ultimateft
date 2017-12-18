@@ -33,12 +33,13 @@ The Ultimate Future Teller
                         {% if not isOnline %}
                         <li><a href="{{ url_for('login') }}">Login</a></li>
                         <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
-                        {% endif %}
                         <li><a href="{{ url_for('dash') }}">UFC Bet</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log out</a></li>
-                        {% if isOnline %}
                         <li><a>Logged as: <b>{{ username }}</b> Your balance: <b>{{ balance }}</b> </a></li>
+                        {% else %}
+                         <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                         <li><a href="{{ url_for('dash') }}">UFC Bet</a></li>
                         {% endif %}
+                        
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
