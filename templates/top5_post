@@ -46,10 +46,7 @@ Top 5's
 </nav>
 
 <div class="row">
-    <div class="col-md-offset-1 col-md-3">1</div>
-    <div class="col-md-offset-1 col-md-3">2
-    </div>
-    <div class="col-md-offset-1 col-md-3">3</div>
+    <div class="col-md-offset-2 col-md-8"><h1>THis is the post numbero {{ id }}</h1></div>
 </div>
 
 {% endblock %}
