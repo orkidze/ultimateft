@@ -1,7 +1,9 @@
 {% extends "bootstrap/base.html" %}
 
 {% block title %}
-Top 5's
+{% for row in list %}
+{{row[1] |safe}}
+{% endfor %}
 {% endblock %}
 
 {% block styles %}
