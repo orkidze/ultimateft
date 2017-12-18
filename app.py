@@ -261,7 +261,7 @@ def top5s():
     return render_template('top5s.html', isOnline = isOnline)
 
 @app.route('/top5/<id>')
-def top5_post():
+def top5_post(id):
     isOnline = False
     if current_user.is_authenticated:
         isOnline = True
