@@ -72,8 +72,8 @@
       <file leaf-file-name="top5_post.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="675">
+              <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -894,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        <state relative-caret-position="675">
+          <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
           <folding />
         </state>
       </provider>
