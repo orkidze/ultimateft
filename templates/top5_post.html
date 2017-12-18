@@ -46,10 +46,19 @@ Top 5's
 </nav>
 
 <div class="row">
-    <div class="col-md-offset-2 col-md-8">some random ass text
+    <div class="col-md-offset-2 col-md-8">
     {% for row in list %}
         <h1>{{row[1] |safe}}</h1>
-        <h2>{{row[3] |safe}}</h2>
+        {{row[3] |safe}}
+        <div class="panel panel-default ">
+                <div class="panel-heading">
+                    <h4 class="card-title">Author</h4>
+                </div>
+                <div class="panel-body">
+                    <p class="card-text">{{ row[5] }}</p>
+                </div>
+
+            </div>
         {% endfor %}
 
     </div>
