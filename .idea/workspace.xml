@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/top5_post.html" afterPath="$PROJECT_DIR$/templates/top5_post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media_db_adapter.py" afterPath="$PROJECT_DIR$/media_db_adapter.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="top5_post.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="top5_post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
+            <state relative-caret-position="1092">
               <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
               <folding />
             </state>
@@ -95,7 +95,7 @@
       <file leaf-file-name="login_db_adapter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
+            <state relative-caret-position="945">
               <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="29" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -123,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="media_db_adapter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="media_db_adapter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/media_db_adapter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            <state relative-caret-position="462">
+              <caret line="22" column="191" lean-forward="false" selection-start-line="22" selection-start-column="191" selection-end-line="22" selection-end-column="191" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -227,8 +227,8 @@
         <option value="$PROJECT_DIR$/static/dashboard.css" />
         <option value="$PROJECT_DIR$/templates/top5s.html" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/media_db_adapter.py" />
         <option value="$PROJECT_DIR$/templates/top5_post.html" />
+        <option value="$PROJECT_DIR$/media_db_adapter.py" />
       </list>
     </option>
   </component>
@@ -884,9 +884,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/login_db_adapter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
+        <state relative-caret-position="945">
           <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="29" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
@@ -896,19 +904,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/media_db_adapter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="462">
+          <caret line="22" column="191" lean-forward="false" selection-start-line="22" selection-start-column="191" selection-end-line="22" selection-end-column="191" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
