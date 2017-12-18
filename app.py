@@ -268,7 +268,9 @@ def top5s():
 
 @app.route('/top5/<id>')
 def top5_post(id):
-    arr = db_media.getTop5(id)
+    arr = list()
+    for i in db_media.getTop5(id):
+        arr.append(i)
     isOnline = False
     if current_user.is_authenticated:
         isOnline = True
