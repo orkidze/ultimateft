@@ -52,22 +52,26 @@ Top 5's
     {% if (loop.index - 1) % 3 == 0 %}
 </div>
 <div class="row" style="text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">
-    <a href="{{ url_for('top5_post', id = item[0]) }}"><div class="col-md-offset-1 col-md-2 card card-image pagination-centered text-center"
-         style="background-image: url(static/img/top5post/{{ item[2] }}); background-size: cover; cover; margin-top: 2%; ">
-        <div class="card-body">
+    <a href="{{ url_for('top5_post', id = item[0]) }}">
+        <div class="col-md-offset-1 col-md-2 card card-image pagination-centered text-center hoverable"
+             style="background-image: url(static/img/top5post/{{ item[2] }}); background-size: cover; cover; margin-top: 2%; ">
+            <div class="card-body">
 
-            <h2 style="padding-top: 17%; padding-bottom: 3%;">{{ item[1] }}</h2>
+                <h2 style="padding-top: 17%; padding-bottom: 3%;">{{ item[1] }}</h2>
+            </div>
         </div>
-    </div></a>
+    </a>
 
     {% else %}
-    <a href="{{ url_for('top5_post', id = item[0]) }}"><div class="col-md-offset-2 col-md-2 card card-image pagination-centered text-center"
-         style="background-image: url(static/img/top5post/{{ item[2] }}); background-size: cover; margin-top: 2%;">
-        <div class="card-body">
+    <a href="{{ url_for('top5_post', id = item[0]) }}">
+        <div class="col-md-offset-2 col-md-2 card card-image pagination-centered text-center hoverable"
+             style="background-image: url(static/img/top5post/{{ item[2] }}); background-size: cover; margin-top: 2%;">
+            <div class="card-body">
 
-            <h2 style="padding-top: 17%; padding-bottom: 3%;">{{ item[1] }}</h2>
+                <h2 style="padding-top: 17%; padding-bottom: 3%;">{{ item[1] }}</h2>
+            </div>
         </div>
-    </div></a>
+    </a>
 
 
     {% endif %}
