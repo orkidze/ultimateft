@@ -13,9 +13,7 @@ body {
 /*
  * Global add-ons
  */
-.card-img-top {
-    width: 100%;
-}
+
 .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
