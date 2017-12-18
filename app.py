@@ -265,7 +265,8 @@ def top5_post():
     isOnline = False
     if current_user.is_authenticated:
         isOnline = True
-    return render_template('top5_post.html',id = id, isOnline = isOnline)
+    value = id
+    return render_template('top5_post.html',id = value, isOnline = isOnline)
 
 @app.route('/dash')
 @login_required
