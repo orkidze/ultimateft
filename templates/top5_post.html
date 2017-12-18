@@ -50,15 +50,7 @@ Top 5's
     {% for row in list %}
         <h1>{{row[1] |safe}}</h1>
         {{row[3] |safe}}
-        <div class="panel panel-default ">
-                <div class="panel-heading">
-                    <h4 class="card-title">Author</h4>
-                </div>
-                <div class="panel-body">
-                    <p class="card-text">{{ row[5] }}</p>
-                </div>
-
-            </div>
+        <h3>Author: {{ row[5] }} . Date: {{ row[6] }}</h3>
         {% endfor %}
 
     </div>
