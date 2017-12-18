@@ -255,7 +255,10 @@ def event_p(id):
 
 @app.route('/top5')
 def top5s():
-    return render_template('top5s.html')
+    isOnline = False
+    if current_user.is_authenticated:
+        isOnline = True
+    return render_template('top5s.html', isOnline = isOnline)
 
 @app.route('/dash')
 @login_required
