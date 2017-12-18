@@ -2,8 +2,7 @@
 
 {% block title %}
 {% for row in list %}
-{{row[1] |safe}}
-{% endfor %}
+{{row[1]}}
 {% endblock %}
 
 {% block styles %}
@@ -49,7 +48,7 @@
 
 <div class="row pagination-centered">
     <div class="col-md-offset-2 col-md-8">
-    {% for row in list %}
+    
         <h1>{{row[1] |safe}}</h1>
         {{row[3] |safe}}
         <h5>Author: {{ row[5] }}, {{ row[6] }}</h5>
