@@ -261,11 +261,11 @@ def top5s():
     return render_template('top5s.html', isOnline = isOnline)
 
 @app.route('/top5/<id>')
-def top5s_post():
+def top5_post():
     isOnline = False
     if current_user.is_authenticated:
         isOnline = True
-    return render_template('top5s.html',id = id, isOnline = isOnline)
+    return render_template('top5_post.html',id = id, isOnline = isOnline)
 
 @app.route('/dash')
 @login_required
