@@ -5,7 +5,7 @@ from wtforms.validators import InputRequired, length, Email
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash,check_password_hash
-
+import tools
 
 
 from login_db_adapter import login_db_adapter
