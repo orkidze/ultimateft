@@ -28,6 +28,7 @@ body {
       height: 50px;
       }
 }
+@media (min-width: 768px) {
 header {
   background: url('img/cover.jpg') repeat;
   width: 100%;
@@ -123,4 +124,5 @@ header {
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
 }
