@@ -16,8 +16,10 @@ body {
      /*   .navbar-toggle {
           background: #A9A9A9 !important;
       } */
+      header{
       background: black;
       height: auto;
+      }
 }
 header {
   background: url('img/cover.jpg') repeat;
