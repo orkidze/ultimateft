@@ -30,7 +30,8 @@ Login - The Ultimate Future Teller
                  {{ wtf.form_field(form.password) }}
                  {{ wtf.form_field(form.remember) }}
             <button class="btn btn-lg btn-default btn-block" type="submit">Sign in</button>
-            <a href="{{ url_for('signup') }}" class="btn btn-default ">New ? Sign UP!</a>
+
         </form>
+         <div class="pagination-centered text-center" style="padding : 3%;"> <a href="{{ url_for('signup') }}" class="btn btn-default ">New ? Sign UP!</a></div>
     </div>
 {% endblock %}
