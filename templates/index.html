@@ -60,23 +60,25 @@ The Ultimate Future Teller
 
 
 </script>
-{% if not isOnline %}
 <div class="row">
     <div class="col-md-12 " style="padding : 4%; padding-top: 3%;" style="margin: 0 auto;">
         <div class="container pagination-centered text-center">
             <div class="panel panel-default ">
                 <div class="panel-heading">
-                    <h4 class="card-title">Already a member?</h4>
+                    <h4 class="card-title">Our UFC top 5's and fantasy betting</h4>
                 </div>
                 <div class="panel-body">
-                    <p class="card-text">Welcome back, please log in.</p>
-                    <a href="{{ url_for('login') }}" class="btn btn-default ">LOG IN</a>
+                    <p class="card-text">Spend your time like a real warrior</p>
+                    <a href="{{ url_for('dash') }}" class="btn btn-default ">Fantasy betting</a>
+                    <a href="{{ url_for('top5s') }}" class="btn btn-default ">UFC Top 5's</a>
                 </div>
 
             </div>
         </div>
     </div>
 </div>
+{% if not isOnline %}
+
 <div class="row">
     <div class="col-md-12" style="padding : 4%; padding-top: 3%;">
         <div class="container pagination-centered text-center " style="margin: 0 auto;">
