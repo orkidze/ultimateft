@@ -15,6 +15,9 @@ body {
 @media (max-width: 768px) {
        .navbar-toggle {
           background: url('img/toggler.jpg');
+          background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
       }
       header{
       background: black;
