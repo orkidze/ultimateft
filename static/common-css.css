@@ -21,7 +21,7 @@ body {
       }
       header{
       background: url('img/smallcover.jpg');
-      height: 50px;
+      height: 200px;
       color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
@@ -29,7 +29,7 @@ body {
       }
       .header {
       background: url('img/smallcover.jpg');
-      height: 50px;
+      height: 200px;
          min-height: 100%;
   webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
