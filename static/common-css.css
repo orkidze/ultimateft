@@ -34,10 +34,10 @@ body {
   webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
       }
-   .navbar-brand  a:focus {
+   a:focus.navbar-brand   {
     color: #FFFFFF;
 }
-.navbar-brand  a:hover {
+a:hover.navbar-brand   {
     color: #FFFFFF;
 }
       .navbar-brand {
