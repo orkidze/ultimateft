@@ -153,3 +153,9 @@ img:hover {
     -ms-transition: all 1s ease;
     transition: all 1s ease;
 }
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
