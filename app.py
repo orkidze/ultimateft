@@ -36,6 +36,7 @@ class User(UserMixin):
         self.admin = admin;
 
 
+
 @login_manager.user_loader
 def load_user(user_id):
     i = database.getUser(user_id)
