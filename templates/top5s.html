@@ -54,28 +54,30 @@ Top 5's
 <div class="row" style="text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">
     <a href="{{ url_for('top5_post', id = item[0]) }}">
         <div class="col-md-4">
-        <div class="col-md-offset-1 col-md-10 panel card-image pagination-centered text-center rounded "
-             style="background-image: url(static/img/top5post/{{ item[2] }}); background-size: cover; cover; margin-top: 2%;
+            <div class="col-md-offset-1 col-md-10 rounded "
+                 style=" margin-top: 2%;
                 border: 2px solid black;">
-            <div class="panel-body">
 
-                <h2 style="padding-top: 17%; padding-bottom: 3%;">{{ item[1] }}</h2>
+                <div class="panel-body">
+                    <img src="static/img/top5post/{{ item[2] }}" alt="Norway" style="width:100%;">
+                    <div class="centered"><h2 style="padding-top: 17%; padding-bottom: 3%;">{{ item[1] }}</h2></div>
+
+                </div>
             </div>
         </div>
-    </div>
     </a>
 
     {% else %}
     <a href="{{ url_for('top5_post', id = item[0]) }}">
         <div class="col-md-4">
-        <div class="col-md-offset-1 col-md-10 panel card-image pagination-centered text-center rounded "
-             style="background-image: url(static/img/top5post/{{ item[2] }}); background-size: cover; margin-top: 2%;
+            <div class="col-md-offset-1 col-md-10 panel card-image pagination-centered text-center rounded "
+                 style="background-image: url(static/img/top5post/{{ item[2] }}); background-size: cover; margin-top: 2%;
  border: 2px solid black;">
-            <div class="panel-body">
+                <div class="panel-body">
 
-                <h2 style="padding-top: 17%; padding-bottom: 3%;">{{ item[1] }}</h2>
+                    <h2 style="padding-top: 17%; padding-bottom: 3%;">{{ item[1] }}</h2>
+                </div>
             </div>
-        </div>
         </div>
     </a>
 
