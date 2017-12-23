@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/top5_post.html" afterPath="$PROJECT_DIR$/templates/top5_post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/top5s.html" afterPath="$PROJECT_DIR$/templates/top5s.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,8 +77,8 @@
       <file leaf-file-name="top5_post.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="785">
-              <caret line="63" column="14" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+            <state relative-caret-position="806">
+              <caret line="83" column="9" lean-forward="false" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -110,8 +109,8 @@
       <file leaf-file-name="top5s.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/top5s.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="68" column="38" lean-forward="true" selection-start-line="56" selection-start-column="3" selection-end-line="68" selection-end-column="38" />
+            <state relative-caret-position="441">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#2;n#!!top" expanded="true" />
@@ -728,8 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/top5s.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="68" column="38" lean-forward="true" selection-start-line="56" selection-start-column="3" selection-end-line="68" selection-end-column="38" />
+        <state relative-caret-position="441">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#2;n#!!top" expanded="true" />
@@ -744,8 +743,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="63" column="14" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+        <state relative-caret-position="806">
+          <caret line="83" column="9" lean-forward="false" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
