@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/top5_post.html" afterPath="$PROJECT_DIR$/templates/top5_post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,24 +32,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top5_post.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="top5_post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-496">
+            <state relative-caret-position="-685">
               <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,7 +167,6 @@
         <option value="$PROJECT_DIR$/templates/top5post.html" />
         <option value="$PROJECT_DIR$/templates/top5_post" />
         <option value="$PROJECT_DIR$/media_db_adapter.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/signup.html" />
         <option value="$PROJECT_DIR$/templates/event.html" />
@@ -181,6 +179,7 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/top5's.css" />
         <option value="$PROJECT_DIR$/templates/top5_post.html" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -604,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="70" column="45" lean-forward="true" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1407">
@@ -739,11 +731,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-496">
+        <state relative-caret-position="-685">
           <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
