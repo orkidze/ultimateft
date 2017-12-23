@@ -44,7 +44,7 @@ Top 5's
         </div>
     </div>
 </nav>
-
+<div class="col-md-offset-1 col-md-9">
 <div class="row">
 
 
@@ -53,8 +53,8 @@ Top 5's
 </div>
 <div class="row" style="text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">
     <a href="{{ url_for('top5_post', id = item[0]) }}">
-        <div class="col-md-offset-1 col-md-3">
-            <div class="col-md-11 rounded fill"
+        <div class="col-md-4">
+            <div class="col-md-12 rounded fill"
                  style=" margin-top: 2%;
                 ">
 
@@ -69,8 +69,8 @@ Top 5's
 
     {% else %}
     <a href="{{ url_for('top5_post', id = item[0]) }}">
-        <div class="col-md-3">
-            <div class="col-md-offset-1 col-md-11 rounded fill"
+        <div class="col-md-4">
+            <div class="col-md-12 rounded fill"
                  style=" margin-top: 2%;
                 ">
 
@@ -86,7 +86,7 @@ Top 5's
 
     {% endif %}
     {% endfor %}
-
+</div>
 </div>
 
 {% endblock %}
