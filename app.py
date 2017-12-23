@@ -35,13 +35,7 @@ class User(UserMixin):
         self.balance = balance
         self.admin = admin;
 
-@app.before_request
-def before_request():
-    if request.url.startswith('http://'):
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        return redirect(url, code=code)
-    
+
 @login_manager.user_loader
 def load_user(user_id):
     i = database.getUser(user_id)
