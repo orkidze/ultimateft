@@ -49,15 +49,11 @@ body {
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #000000;
     opacity: 0.6;
+    transition: opacity 1s ease;
     border-right: 1px solid black;
   }
   .sidebar:hover{
-  -webkit-filter: opacity: 0.8;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+     opacity: 0.8;
 
   }
 }
