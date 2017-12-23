@@ -141,11 +141,11 @@ a:visited {
 a:hover {
     color: white;
 }
-.post {
+img {
     -webkit-filter: brightness(100%);
 }
 
-.post a:hover {
+img:hover {
     -webkit-filter: brightness(70%);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
