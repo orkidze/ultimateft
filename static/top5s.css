@@ -67,6 +67,24 @@ body {
     transition: opacity 1s ease;
     border-right: 1px solid black;
   }
+  .otherside {
+  position: fixed;
+    top: 51px;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #000000;
+    opacity: 0.6;
+    transition: opacity 1s ease;
+    border-right: 1px solid black;
+  }
+  .otherside:hover{
+  opacity: 0.8;
+  }
   .sidebar:hover{
      opacity: 0.8;
 
