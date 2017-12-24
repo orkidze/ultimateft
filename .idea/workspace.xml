@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="738">
-              <caret line="100" column="125" lean-forward="false" selection-start-line="100" selection-start-column="125" selection-end-line="100" selection-end-column="125" />
+              <caret line="100" column="134" lean-forward="false" selection-start-line="100" selection-start-column="134" selection-end-line="100" selection-end-column="134" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -821,7 +821,7 @@
     <entry file="file://$PROJECT_DIR$/templates/top5_post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
-          <caret line="100" column="125" lean-forward="false" selection-start-line="100" selection-start-column="125" selection-end-line="100" selection-end-column="125" />
+          <caret line="100" column="134" lean-forward="false" selection-start-line="100" selection-start-column="134" selection-end-line="100" selection-end-column="134" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
