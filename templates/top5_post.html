@@ -73,7 +73,7 @@
     </div>
     <div class="col-md-offset-10 col-md-2 hidden-sm hidden-xs otherside">
     {% if next is defined and next|length > 0 %}
-        <div style=" margin-top: 45%;">
+        <div class="text-center" style=" margin-top: 45%;">
             <h3>Next post: </h3>
             <a href="{{ url_for('top5_post', id = next[0]) }}" >
 
@@ -98,6 +98,7 @@
          </div>
         {% endif %}
     </div>
+    <div class="hidden-md hidden-lg text-center"><a href="{{ url_for('top5_post', id = next[0]) }}" >Next post: {{ next[1] }} </a></div>
 </div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
