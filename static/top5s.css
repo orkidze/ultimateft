@@ -221,10 +221,10 @@ img:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
     }
     .t5-img img {
      flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%
+    max-width: 100%;
+    max-height: 100%
     }
