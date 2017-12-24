@@ -54,7 +54,7 @@ body {
   .sidebar {
 
     position: fixed;
-    top: 51px;
+    top: 50px;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -69,7 +69,7 @@ body {
   }
   .otherside {
   position: fixed;
-    top: 51px;
+    top: 50px;
     bottom: 0;
     right: 0;
     z-index: 1000;

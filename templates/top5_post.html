@@ -72,7 +72,24 @@
 
     </div>
     <div class="col-md-offset-10 col-md-2 hidden-sm hidden-xs otherside">
-        <h1>Hello</h1>
+        <h3>Next post: </h3>
+        <div style=" margin-top: 45%">
+            <a href="{{ url_for('top5_post', id = next[0]) }}">
+                <div class="col-md-4">
+                    <div class="col-md-12 rounded fill"
+                         style=" margin-top: 2%;
+                ">
+
+                        <div class="panel-body">
+                            <img src="static/img/top5post/{{ next[2] }}" alt="Norway" style="width:100%;">
+                            <div class="centered"><h2 style="padding-top: 17%; padding-bottom: 3%;">{{ next[1] }}</h2>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 <div id="fb-root"></div>
@@ -83,6 +100,7 @@
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=1980450765546199';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
 
 </script>
 {% endblock %}

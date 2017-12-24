@@ -269,12 +269,15 @@ def top5s():
 @app.route('/top5/<id>')
 def top5_post(id):
     arr = list()
+    next = list()
     for i in db_media.getTop5(id):
         arr.append(i)
     isOnline = False
+    for i in db_media.nextTop5(id):
+        next.append(i)
     if current_user.is_authenticated:
         isOnline = True
-    return render_template('top5_post.html',list = arr, isOnline = isOnline)
+    return render_template('top5_post.html',list = arr,next = next, isOnline = isOnline)
 
 @app.route('/dash')
 @login_required
