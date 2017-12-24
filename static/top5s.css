@@ -213,3 +213,18 @@ img:hover {
     min-width: 100%;
     min-height: 100%
 }
+.t5-img {
+  position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+    }
+    .t5-img img {
+     flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+    }
