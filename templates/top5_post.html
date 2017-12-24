@@ -98,7 +98,11 @@
          </div>
         {% endif %}
     </div>
-    <div class="hidden-md hidden-lg text-center"><a href="{{ url_for('top5_post', id = next[0]) }}" ><h2>Next post: {{ next[1] }}</h2> </a></div>
+    {% if next is defined and next|length > 0 %}
+    <div class="hidden-md hidden-lg text-center"><a href="{{ url_for('top5_post', id = next[0]) }}" ><h3>Next post: {{ next[1] }}</h3> </a></div>
+    {% else %}
+    <div class="hidden-md hidden-lg text-center"><a href="{{ url_for('top5s') }}" ><h3>This is the last post.</h3> </a></div>
+    {% endif %}
 </div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
