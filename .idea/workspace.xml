@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e861555f-6678-489a-b521-80dac2d2ce6d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/top5post/4.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/top5post/3.jpg" afterPath="$PROJECT_DIR$/static/img/top5post/3.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/top5s.css" afterPath="$PROJECT_DIR$/static/top5s.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +71,8 @@
       <file leaf-file-name="top5s.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/top5s.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="829">
-              <caret line="228" column="20" lean-forward="false" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
+            <state relative-caret-position="661">
+              <caret line="223" column="3" lean-forward="false" selection-start-line="223" selection-start-column="3" selection-end-line="223" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -828,8 +826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/top5s.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="228" column="20" lean-forward="false" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
+        <state relative-caret-position="661">
+          <caret line="223" column="3" lean-forward="false" selection-start-line="223" selection-start-column="3" selection-end-line="223" selection-end-column="3" />
           <folding />
         </state>
       </provider>
