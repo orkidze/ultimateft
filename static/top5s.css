@@ -199,6 +199,10 @@ img:hover {
     transform: translate(-50%, -50%);
 }
 .fill {
+     position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
