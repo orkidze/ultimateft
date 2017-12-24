@@ -273,8 +273,12 @@ def top5_post(id):
     for i in db_media.getTop5(id):
         arr.append(i)
     isOnline = False
-    for i in db_media.nextTop5(id):
-        next.append(i)
+    try:
+        for i in db_media.nextTop5(id):
+            next.append(i)
+    except:
+        next = list()
+
     if current_user.is_authenticated:
         isOnline = True
     return render_template('top5_post.html',list = arr,next = next, isOnline = isOnline)
