@@ -12,7 +12,7 @@ from login_db_adapter import login_db_adapter
 from media_db_adapter import media_db_adapter
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'verysecretsecretkey'
+app.config['SECRET_KEY'] = ''
 Bootstrap(app)
 database = login_db_adapter()
 db_media = media_db_adapter()
